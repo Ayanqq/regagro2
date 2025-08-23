@@ -30,10 +30,8 @@ export default function HeroSection() {
             </button>
           </div>
         </div>
-      </div>
-
-      {/* Play Button */}
-      <div className="absolute bottom-[40px] right-[200px] z-20 flex gap-4 items-center">
+        {/* Play Button */}
+      <div className="absolute bottom-[40px] right-[130px] z-20 flex gap-4 items-center">
         <div className="text-white text-lg font-medium leading-[120%]">
         Learn more about us by <br /> watching a short video
         </div>
@@ -41,6 +39,9 @@ export default function HeroSection() {
           <Image src="/images/play.png" alt="Play" width={105} height={105} />
         </button>
       </div>
+      </div>
+
+      
     </section>
   );
 }
