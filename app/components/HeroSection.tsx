@@ -1,36 +1,44 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function HeroSection() {
   return (
-    <section className="relative flex items-center pt-[125px]">
+    <section className="relative pt-[125px]">
       {/* Content */}
-      <div className="max-w-[1320px] h-[777px] mx-auto px-4 relative z-10">
+      <div className="max-w-[1320px] h-[777px] mx-auto px-8 relative z-10">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
             src="/images/section/section-1.png" 
             alt="Hero background" 
-            className=" object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
 
-        <div className=" items-center relative z-20">
+        <div className=" items-center relative z-20 pt-[218px]">
           {/* Left Content */}
-          <div className="text-white">
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Revolutionize animal identification with this one-stop platform from a leading global manufacturer
+          <div className="text-white items-center">
+            <h1 className="text-[42px] font-bold leading-tight mb-5">
+              Revolutionize animal identification <br /> with this one-stop platform from <br /> a leading global manufacturer
             </h1>
-            <button className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-colors">
-              LEARN MORE
+            <p className="text-white text-lg font-normal mb-7.5">
+              Durable microchips and tags, digital passports, and advanced IT tools—everything <br /> you need for effective animal identification and health management in one place.
+            </p>
+            <button className="bg-[#FFDA18] text-[#355332] px-[55px] py-[24px] rounded-full text-lg leading-[120%] font-semibold hover:bg-[#FFDA18] transition-colors cursor-pointer">
+              LEARN MORE 
             </button>
           </div>
         </div>
       </div>
 
       {/* Play Button */}
-      <div className="absolute bottom-8 right-8">
-        <button className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
-          <div className="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+      <div className="absolute bottom-[40px] right-[200px] z-20 flex gap-4 items-center">
+        <div className="text-white text-lg font-medium leading-[120%]">
+        Learn more about us by <br /> watching a short video
+        </div>
+        <button className="cursor-pointer">
+          <Image src="/images/play.png" alt="Play" width={105} height={105} />
         </button>
       </div>
     </section>
