@@ -1,11 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
-import {Plus_Jakarta_Sans} from "next/font/google";
+import {dmSans, plusJakarta} from "@/app/fonts";
 
-const plusJakarta = Plus_Jakarta_Sans({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
     title: "RegAgro - Animal Identification & Livestock Management",
@@ -18,8 +14,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-        <body className={plusJakarta.className}>
+        <html lang="en" className={`${dmSans.variable} ${plusJakarta.variable}`}>
+        <body className={'font-dm'}>
         {children}
         </body>
         </html>
