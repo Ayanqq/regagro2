@@ -1,12 +1,40 @@
+'use client';
+
+import { useState } from 'react';
+import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
+import ProductsSection from './components/ProductsSection';
+import BulletinBoardSection from './components/BulletinBoardSection';
+import MobileAppSection from './components/MobileAppSection';
+import CompanyNewsSection from './components/CompanyNewsSection';
+import ContactSection from './components/ContactSection';
+import Pagination from './components/Pagination';
+
 export default function Home() {
-    return (
-        <div className="text-black">
-            BEKA LOX AYAN GAY
-            BEKA LOX AYAN GAY
-            BEKA LOX AYAN GAY
+  const [currentSection, setCurrentSection] = useState('hero');
+  
+  const sections = [
+    'hero',
+    'about', 
+    'catalog',
+    'news',
+    'breed',
+    'contacts'
+  ];
 
-
-            <p className='text-5xl'>CELTIC ONE LOVE</p>
-        </div>
-    );
+  return (
+    <main className="min-h-screen">
+      <Header />
+      <Pagination sections={sections} onSectionChange={setCurrentSection} />
+      
+      <HeroSection />
+      <AboutSection />
+      <ProductsSection />
+      <BulletinBoardSection />
+      <MobileAppSection />
+      <CompanyNewsSection />
+      <ContactSection />
+    </main>
+  );
 }
