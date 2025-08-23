@@ -41,16 +41,16 @@ export default function Pagination({ sections, onSectionChange }: PaginationProp
   };
 
   return (
-    <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div className="fixed right-[340px] top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
       <div className="flex flex-col items-center space-y-4">
         {sections.map((sectionId, index) => (
           <button
             key={sectionId}
             onClick={() => scrollToSection(sectionId, index)}
-            className={`w-4 h-4 rounded-full transition-all duration-300 ${
+            className={`rounded-full transition-all duration-300 ${
               activeSection === index
-                ? 'bg-yellow-400 scale-125 shadow-lg'
-                : 'bg-white/60 hover:bg-white/80 hover:scale-110'
+                ? 'w-4 h-4 bg-[#FFDA18] border border-white'
+                : 'w-2 h-2  bg-white'
             }`}
             title={sectionId.charAt(0).toUpperCase() + sectionId.slice(1)}
           />
