@@ -33,7 +33,11 @@ export default function ProductsSection() {
           </div>
 
           {/* Right Side - Product Features */}
-          <div className="mt-[110px] flex flex-col gap-8">
+          <div className="mt-[110px] flex flex-col gap-8 relative">
+            {/* Vertical Line with Dots */}
+          <div className="absolute -left-[15px] -top-[100px] bottom-0 flex flex-col items-center justify-center z-20">
+           <Image src="/images/line.png" alt="Line" width={10} height={394} />
+          </div>
             {/* Product Feature 1 */}
             <div className="flex flex-col items-start">
               <Image src="/images/products/products-1.png" alt="Products" width={60} height={60} />
@@ -55,17 +59,19 @@ export default function ProductsSection() {
               <p className="text-sm text-gray-600">he catalog is organized by product categories <br /> and types, making it easy to find and order <br /> goods.</p>
             </div>
           </div>
-        </div>
 
-        <div className="absolute top-[60px] right-[110px] z-20 flex gap-4 items-center">
-          <div className="text-[#4F584E] text-[12px] font-medium leading-[120%]">
-            Explore the company’s <br /> expertise by watching <br /> the short video
+          {/* Play Button */}
+          <div className="absolute top-[60px] right-[110px] z-20 flex gap-4 items-center">
+            <div className="text-[#4F584E] text-[12px] font-medium leading-[120%]">
+              Explore the company's <br /> expertise by watching <br /> the short video
+            </div>
+            <button className="cursor-pointer">
+              <Image src="/images/play-black.png" alt="Play" width={85} height={85} />
+            </button>
           </div>
-          <button className="cursor-pointer">
-            <Image src="/images/play-black.png" alt="Play" width={85} height={85} />
-          </button>
-        </div>
 
+          
+        </div>
       </div>
     </section>
   );
