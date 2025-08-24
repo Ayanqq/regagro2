@@ -45,7 +45,7 @@ export default function Header() {
 
   return (
       <header className="max-w-[1320px] mx-auto fixed top-[15px] left-0 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-full z-50">
-        <div className="px-4">
+        <div className="px-7.5">
           <div className="flex items-center justify-between h-[92px]">
             {/* Logo */}
             <div className="flex items-center space-x-2">
@@ -53,12 +53,12 @@ export default function Header() {
             </div>
 
             {/* Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="flex items-center gap-[40px]">
               {navItems.map((item) => (
                   <a
                       key={item.href}
                       href={item.href}
-                      className={`transition-colors font-medium ${
+                      className={`transition-colors font-medium text-[17px] leading-[120%] tracking-[-2%] ${
                           activeHash === item.href
                               ? "text-[#2F3F2D] font-bold underline decoration-dotted underline-offset-[6px]"
                               : "text-gray-600 hover:text-[#4F584E]"
@@ -70,7 +70,7 @@ export default function Header() {
             </nav>
 
             {/* Button */}
-            <button className="bg-[#2F3F2D] text-white px-12.5 py-4.5 rounded-full font-normal hover:bg-[#43764C] transition-colors cursor-pointer">
+            <button className="bg-[#2F3F2D] text-white px-12.5 py-4.5 rounded-full leading-[120%] tracking-[-2%] font-normal hover:bg-[#43764C] transition-colors cursor-pointer">
               Request a call
             </button>
           </div>
