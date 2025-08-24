@@ -16,8 +16,9 @@ export default function BulletinBoardSection() {
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <Headtitle minTitle={'it solutions'} title={'Professional bulletin board'}/>
-                <div className={'flex relative'}>
+                <div className="z-20 relative pt-[60px]">
+                    <Headtitle minTitle={'it solutions'} title={'Professional bulletin board'}/>
+                    <div className={'flex relative'}>
                     <div>
                         <div className={'max-w-[650px] flex flex-col gap-[20px]'}>
                             <p className={'text-[17px] font-normal text-[#4F584E]'}>Verify animals’ breed and
@@ -69,6 +70,7 @@ export default function BulletinBoardSection() {
                     <div className={'absolute right-[450px] top-[160px]'}>
                         <Image src={'/images/bulletinboard/Group 65-min.png'} width={393} height={325}
                                alt={'decoration'}/>
+                    </div>
                     </div>
                 </div>
             </Container>
