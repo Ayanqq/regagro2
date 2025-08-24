@@ -9,4 +9,8 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
