@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section id="hero" className="relative pt-[125px]">
       {/* Content */}
-      <div className="max-w-[1320px] h-[777px] mx-auto md:px-7.5 px-[15px] relative z-10">
+      <div className="max-w-[1320px] md:h-[777px] h-[663px] mx-auto md:px-7.5 px-[15px] relative z-10">
         {/* Background Image */}
         <div className="absolute inset-0">
           {/* Desktop Image */}
@@ -19,10 +19,9 @@ export default function HeroSection() {
           <img
             src="/images/section/mobile/section-1.png"
             alt="Hero background mobile"
-            className="w-full h-full object-cover rounded-[20px] md:hidden"
+            className="w-full h-full rounded-[20px] md:hidden"
           />
           {/* Dark overlay */}
-          <div className="absolute inset-0 rounded-b-[20px]"></div>
         </div>
 
         <div className="items-center relative z-20 md:pt-[218px] pt-[100px]">
@@ -39,7 +38,7 @@ export default function HeroSection() {
             </h1>
             
             {/* Description */}
-            <p className="text-white text-[16px] leading-[130%] tracking-[-2%] font-normal md:mb-[30px] mb-[20px]  md:max-w-[625px] max-w-[345px]">
+            <p className="text-white md:text-[16px] text-[14px] leading-[130%] tracking-[-2%] font-normal md:mb-[30px] mb-[20px]  md:max-w-[625px] max-w-[345px]">
               Durable microchips and tags, digital passports, and advanced IT tools—everything you need for effective animal identification and health management in one place.
             </p>
             
@@ -52,7 +51,7 @@ export default function HeroSection() {
           </div>
         </div>
         {/* Play Button */}
-        <div className="absolute md:bottom-[40px] bottom-53 md:right-[110px] z-20 flex gap-4 items-center">
+        <div className="absolute md:bottom-[40px] bottom-[150px] md:right-[110px] z-20 flex gap-4 items-center">
           <div className="flex gap-4 items-center">
             {/* On desktop: text first, then button. On mobile: button first, then text */}
             <div className="md:order-1 order-2 text-white md:text-[17px] text-[12px] font-medium leading-[120%] tracking-[-2%]">
