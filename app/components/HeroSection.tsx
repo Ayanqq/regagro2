@@ -6,41 +6,62 @@ export default function HeroSection() {
   return (
     <section id="hero" className="relative pt-[125px]">
       {/* Content */}
-      <div className="max-w-[1320px] h-[777px] mx-auto px-8 relative z-10">
+      <div className="max-w-[1320px] h-[777px] mx-auto md:px-7.5 px-[15px] relative z-10">
         {/* Background Image */}
         <div className="absolute inset-0">
+          {/* Desktop Image */}
           <img
             src="/images/section/section-1.png"
             alt="Hero background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-[20px] hidden md:block"
           />
+          {/* Mobile Image */}
+          <img
+            src="/images/section/mobile/section-1.png"
+            alt="Hero background mobile"
+            className="w-full h-full object-cover rounded-[20px] md:hidden"
+          />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 rounded-b-[20px]"></div>
         </div>
 
-        <div className=" items-center relative z-20 pt-[218px]">
+        <div className="items-center relative z-20 md:pt-[218px] pt-[100px]">
           {/* Left Content */}
           <div className="text-white items-center">
-            <div className={'px-[20px] py-[14px] bg-white/10 backdrop-blur-md border border-white w-fit rounded-full text-[12px] font-medium'}>
-              <h3 className={'text-white leading-[100%] tracking-[0%]'}>welcome to regagro</h3>
+            {/* Welcome badge */}
+            <div className="px-[20px] py-[14px] bg-white/10 backdrop-blur-md border border-white w-fit rounded-full text-[12px] font-medium md:mb-2.5 mb-1">
+              <h3 className="text-white leading-[100%] tracking-[0%]">welcome to regagro</h3>
             </div>
-            <h1 className="font-jakarta text-[40px] font-bold mb-5 mt-2.5 leading-[110%] tracking-[-2%]">
-              Revolutionize animal identification <br /> with this one-stop platform from <br /> a leading global manufacturer
+            
+            {/* Main headline */}
+            <h1 className="font-jakarta md:text-[40px] text-[24px] font-bold md:mb-[20px] mb-[15px] leading-[110%] tracking-[-2%] md:max-w-[685px] max-w-[345px]">
+              Revolutionize animal identification with this one-stop platform from a leading global manufacturer
             </h1>
-            <p className="text-white text-[16px] leading-[130%] tracking-[-2%] font-normal mb-7.5">
-              Durable microchips and tags, digital passports, and advanced IT tools—everything <br /> you need for effective animal identification and health management in one place.
+            
+            {/* Description */}
+            <p className="text-white text-[16px] leading-[130%] tracking-[-2%] font-normal md:mb-[30px] mb-[20px]  md:max-w-[625px] max-w-[345px]">
+              Durable microchips and tags, digital passports, and advanced IT tools—everything you need for effective animal identification and health management in one place.
             </p>
-            <button className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] px-[55px] py-[24px] rounded-full text-[17px] leading-[120%] tracking-[-2%] font-semibold hover:bg-[#FFDA18] transition-colors cursor-pointer">
-              LEARN MORE
-            </button>
+            
+            {/* Primary CTA Button with red dot */}
+            <div className="flex items-center gap-3">
+              <button className="bg-[#FFDA18] text-[#355332] md:px-[55px] px-[20px] md:py-[24px] py-[18px] md:w-auto w-full rounded-full md:text-[17px] text-[12px] leading-[120%] tracking-[-2%] font-semibold hover:bg-[#FFE55E] transition-colors cursor-pointer">
+                LEARN MORE
+              </button>
+            </div>
           </div>
         </div>
         {/* Play Button */}
-        <div className="absolute bottom-[40px] right-[110px] z-20 flex gap-4 items-center">
-          <div className="text-white text-[17px] font-medium leading-[120%] tracking-[-2%]">
-            Learn more about us by <br /> watching a short video
+        <div className="absolute md:bottom-[40px] bottom-53 md:right-[110px] z-20 flex gap-4 items-center">
+          <div className="flex gap-4 items-center">
+            {/* On desktop: text first, then button. On mobile: button first, then text */}
+            <div className="md:order-1 order-2 text-white md:text-[17px] text-[12px] font-medium leading-[120%] tracking-[-2%]">
+              Learn more about us by <br /> watching a short video
+            </div>
+            <button className="cursor-pointer md:order-2 order-1">
+              <Image src="/images/play.png" alt="Play" width={65} height={65} className="md:w-[105px] md:h-[105px]" />
+            </button>
           </div>
-          <button className="cursor-pointer">
-            <Image src="/images/play.png" alt="Play" width={105} height={105} />
-          </button>
         </div>
       </div>
 
