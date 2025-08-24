@@ -29,7 +29,7 @@ export default function MobileAppSection() {
                                 records and animal history.</p>
                         </div>
                         <button
-                            className="mt-[30px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] px-[60px] py-[24px] max-w-[420px] rounded-full font-semibold text-[#355332]">LEARN
+                            className="cursor-pointer mt-[30px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] px-[60px] py-[24px] max-w-[420px] rounded-full font-semibold text-[#355332]">LEARN
                             MORE ABOUT THE
                             E-PASSPORT
                         </button>

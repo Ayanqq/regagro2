@@ -23,7 +23,7 @@ export default function CompanyNewsSection() {
                     </div>
                     <div>
                         <button
-                            className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] rounded-full py-[24px] px-[60px] font-semibold">
+                            className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] rounded-full py-[24px] px-[60px] font-semibold cursor-pointer">
                             EXPLORE THE LATEST NEWS
                         </button>
                     </div>

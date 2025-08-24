@@ -42,7 +42,7 @@ export default function AboutSection() {
               </div>
             </div>
 
-            <button className="bg-[#FFDA18] text-[#355332] px-[55px] py-[24px] rounded-full text-lg leading-[120%] font-semibold transition-colors uppercase">
+            <button className="bg-[#FFDA18] text-[#355332] px-[55px] py-[24px] rounded-full text-lg leading-[120%] font-semibold transition-colors uppercase cursor-pointer">
               Find out more about the company
             </button>
           </div>

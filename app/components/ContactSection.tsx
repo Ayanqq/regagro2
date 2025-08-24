@@ -36,7 +36,7 @@ export default function ContactSection() {
                             </div>
                         </div>
                         <button type={'submit'}
-                                className={'bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] w-full py-[24px] font-semibold rounded-full'}>SUBMIT
+                                className={'bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] w-full py-[24px] font-semibold rounded-full cursor-pointer'}>SUBMIT
                             A REQUEST
                         </button>
                     </form>

@@ -21,19 +21,26 @@ export default function Header() {
 
     const observer = new IntersectionObserver(
         (entries) => {
-          const visibleSection = entries.find((entry) => entry.isIntersecting);
-          if (visibleSection?.target) {
-            const id = `#${visibleSection.target.id}`;
-            setActiveHash(id);
-            window.history.replaceState(null, "", id); // меняем hash в URL
-          }
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const newHash = `#${entry.target.id}`;
+              setActiveHash(newHash);
+              history.replaceState(null, "", newHash); // меняем URL без перезагрузки
+            }
+          });
         },
-        { rootMargin: "-40% 0px -50% 0px", threshold: 0.1 } // смещение для лучшего UX
+        { threshold: 0.5 } // 50% секции в видимости
     );
 
-    sections.forEach((section) => section && observer.observe(section));
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
 
-    return () => observer.disconnect();
+    return () => {
+      sections.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
   }, []);
 
   return (
@@ -51,9 +58,9 @@ export default function Header() {
                   <a
                       key={item.href}
                       href={item.href}
-                      className={`transition-colors font-normal ${
+                      className={`transition-colors font-medium ${
                           activeHash === item.href
-                              ? "text-[#2F3F2D] font-bold underline decoration-dotted underline-offset-4"
+                              ? "text-[#2F3F2D] font-bold underline decoration-dotted underline-offset-[6px]"
                               : "text-gray-600 hover:text-[#4F584E]"
                       }`}
                   >
@@ -63,7 +70,7 @@ export default function Header() {
             </nav>
 
             {/* Button */}
-            <button className="bg-[#2F3F2D] text-white px-12.5 py-4.5 rounded-full font-normal hover:bg-[#43764C] transition-colors">
+            <button className="bg-[#2F3F2D] text-white px-12.5 py-4.5 rounded-full font-normal hover:bg-[#43764C] transition-colors cursor-pointer">
               Request a call
             </button>
           </div>
