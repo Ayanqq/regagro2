@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function BulletinBoardSection() {
     return (
-        <section id="bulletin-board" className="relative bg-white pt-[125px] pl-[30px]">
+        <section id="bulletin-board" className="relative pt-[125px]">
             <Container className="relative">
                 <div className="absolute top-0 left-0 right-[20px] ">
                     <img

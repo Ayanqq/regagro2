@@ -4,7 +4,7 @@ import {CardNews} from "@/app/ui/CardNews";
 
 export default function CompanyNewsSection() {
     return (
-        <section className="relative h-[777px] bg-white pt-[125px] " id={'company-news'}>
+        <section className="relative pt-[125px]" id={'company-news'}>
             <Container className={'flex flex-col gap-[30px] relative'}>
                 <div className="absolute top-0 left-0 right-0px z-10">
                     <img

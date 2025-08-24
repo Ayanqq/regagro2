@@ -5,15 +5,15 @@ import Image from "next/image";
 
 export default function MobileAppSection() {
     return (
-        <section id="breed" className="relative h-[777px] bg-gray-50 pt-[125px]">
+        <section id="breed" className="relative pt-[125px]">
             <Container className={'flex flex-col gap-[30px] relative'}>
-                {/*<div className="absolute top-0 left-0 right-0px z-10">*/}
-                {/*    <img*/}
-                {/*        src="/images/section/section-5.png"*/}
-                {/*        alt="About background"*/}
-                {/*        className="w-full h-full object-cover"*/}
-                {/*    />*/}
-                {/*</div>*/}
+                <div className="absolute top-0 left-0 right-0px z-10">
+                    <img
+                        src="/images/section/section-5.png"
+                        alt="About background"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
                 <Headtitle minTitle={'it solutions'} title={'Mobile app for pets and livestock'}/>
                 <div className={'flex justify-between'}>
                     <div>

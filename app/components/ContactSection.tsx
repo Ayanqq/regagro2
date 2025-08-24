@@ -3,7 +3,7 @@ import Container from "@/app/ui/Container";
 
 export default function ContactSection() {
     return (
-        <section id="contacts" className={'h-[777px] pl-[30px] pt-[125px] relative'}>
+        <section id="contacts" className={'pt-[125px] relative'}>
             <Container className={'relative'}>
                 <div className="absolute top-0 left-0 right-[20px] z-10">
                     <img
