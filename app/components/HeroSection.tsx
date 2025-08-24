@@ -28,10 +28,10 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="text-white items-center">
             {/* Welcome badge */}
-            <div className="md:px-[20px] md:py-[14px] py-[6px] px-[12px] bg-white/10 md:backdrop-blur-xs border border-white w-fit rounded-full text-[12px] font-medium md:mb-2.5 mb-1">
-              <h3 className="text-white leading-[100%] tracking-[0%] font-normal">welcome to regagro</h3>
+            <div className="px-[20px] py-[14px] bg-white/10 backdrop-blur-md border border-white w-fit rounded-full text-[12px] font-medium md:mb-2.5 mb-1">
+              <h3 className="text-white leading-[100%] tracking-[0%]">welcome to regagro</h3>
             </div>
-
+            
             {/* Main headline */}
             <h1 className="font-jakarta md:text-[40px] text-[24px] font-bold md:mb-[20px] mb-[15px] leading-[110%] tracking-[-2%] md:max-w-[685px] max-w-[345px]">
               Revolutionize animal identification with this one-stop platform from a leading global manufacturer
