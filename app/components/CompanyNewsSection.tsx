@@ -13,6 +13,7 @@ export default function CompanyNewsSection() {
                         className="w-full h-full object-cover"
                     />
                 </div>
+                <div className="z-20 relative pt-[60px]">
                 <Headtitle minTitle={'updates'} title={'Company news'}/>
                 <div className={'flex flex-col gap-[30px]'}>
                     <div className={'flex justify-between flex-wrap'}>
@@ -26,6 +27,7 @@ export default function CompanyNewsSection() {
                             EXPLORE THE LATEST NEWS
                         </button>
                     </div>
+                </div>
                 </div>
             </Container>
         </section>

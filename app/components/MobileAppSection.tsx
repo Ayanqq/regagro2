@@ -1,7 +1,6 @@
 import {Headtitle} from "@/app/ui/Headtitle";
 import Container from "@/app/ui/Container";
 import {VideoPlayer} from "@/app/ui/VideoPlayer";
-import Image from "next/image";
 
 export default function MobileAppSection() {
     return (
@@ -14,6 +13,7 @@ export default function MobileAppSection() {
                         className="w-full h-full object-cover"
                     />
                 </div>
+                <div className="z-20 relative pt-[60px]">
                 <Headtitle minTitle={'it solutions'} title={'Mobile app for pets and livestock'}/>
                 <div className={'flex justify-between'}>
                     <div>
@@ -34,8 +34,6 @@ export default function MobileAppSection() {
                             E-PASSPORT
                         </button>
                     </div>
-                    <div className={'max-w-[263px]'}>
-                        <Image alt={'iphone'} src={'/images/mobilesection/iphone-min.png'} width={532} height={260}/>
                     </div>
                 </div>
             </Container>

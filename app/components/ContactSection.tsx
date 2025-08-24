@@ -12,6 +12,7 @@ export default function ContactSection() {
                         className="w-full h-full object-cover"
                     />
                 </div>
+                <div className="z-20 relative pt-[60px]">
                 <Headtitle minTitle={'request'} title={'Have any questions? Write to us — we’ll help you out'}/>
                 <div className={'flex gap-[115px] mt-[25px]'}>
                     <form className={'w-[615px] flex flex-col gap-[30px]'}>
@@ -62,6 +63,7 @@ export default function ContactSection() {
                             </ul>
                         </nav>
                     </div>
+                </div>
                 </div>
             </Container>
         </section>
