@@ -15,7 +15,7 @@ export default function CustomCheckbox() {
 
             {/* кастомный чекбокс */}
             <span
-                className={`w-[18px] h-[18px] flex items-center justify-center rounded 
+                className={`min-w-[18px] min-h-[18px] flex items-center justify-center rounded 
           ${checked
                     ? "border-[1.5px] border-[#4F584E] bg-white"
                     : "border border-[#4F584E]/50 bg-white"
