@@ -29,20 +29,20 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="text-white items-center">
             {/* Welcome badge */}
-            <div className="px-[20px] py-[14px] bg-white/10 backdrop-blur-md border border-white w-fit rounded-full text-[12px] font-medium md:mb-2.5 mb-1">
-              <h3 className="text-white leading-[100%] tracking-[0%]">welcome to regagro</h3>
+            <div className="md:px-[20px] md:py-[14px] py-[6px] px-[12px] bg-white/10 md:backdrop-blur-xs border border-white w-fit rounded-full text-[12px] font-medium md:mb-2.5 mb-1">
+              <h3 className="text-white leading-[100%] tracking-[0%] font-normal">welcome to regagro</h3>
             </div>
-            
+
             {/* Main headline */}
             <h1 className="font-jakarta md:text-[40px] text-[24px] font-bold md:mb-[20px] mb-[15px] leading-[110%] tracking-[-2%] md:max-w-[685px] max-w-[345px]">
               Revolutionize animal identification with this one-stop platform from a leading global manufacturer
             </h1>
-            
+
             {/* Description */}
             <p className="text-white text-[16px] leading-[130%] tracking-[-2%] font-normal md:mb-[30px] mb-[20px]  md:max-w-[625px] max-w-[345px]">
               Durable microchips and tags, digital passports, and advanced IT tools—everything you need for effective animal identification and health management in one place.
             </p>
-            
+
             {/* Primary CTA Button with red dot */}
             <div className="flex items-center gap-3">
               <button className="bg-[#FFDA18] text-[#355332] md:px-[55px] px-[20px] md:py-[24px] py-[18px] md:w-auto w-full rounded-full md:text-[17px] text-[12px] leading-[120%] tracking-[-2%] font-semibold hover:bg-[#FFE55E] transition-colors cursor-pointer">
