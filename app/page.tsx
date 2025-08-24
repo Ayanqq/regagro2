@@ -18,8 +18,9 @@ export default function Home() {
     'hero',
     'about', 
     'catalog',
-    'news',
+    'bulletin-board',
     'breed',
+    'company-news',
     'contacts'
   ];
 
