@@ -15,7 +15,7 @@ export default function MobileAppSection() {
                 </div>
                 <div className="z-20 relative pt-[60px]">
                 <Headtitle minTitle={'it solutions'} title={'Mobile app for pets and livestock'}/>
-                <div className={'flex justify-between'}>
+                <div className={'flex justify-between mt-[30px]'}>
                     <div>
                         <div className={'max-w-[650px] flex flex-col gap-[20px]'}>
                             <VideoPlayer/>

@@ -1,43 +1,73 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+  const [activeHash, setActiveHash] = useState<string>("");
+
+  const navItems = [
+    { href: "#about", label: "About the Company" },
+    { href: "#catalog", label: "Catalog" },
+    { href: "#bulletin-board", label: "Bulletin Board" },
+    { href: "#company-news", label: "News" },
+    { href: "#contacts", label: "Contacts" },
+  ];
+
+  useEffect(() => {
+    const sections = navItems.map((item) =>
+        document.querySelector(item.href)
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+          const visibleSection = entries.find((entry) => entry.isIntersecting);
+          if (visibleSection?.target) {
+            const id = `#${visibleSection.target.id}`;
+            setActiveHash(id);
+            window.history.replaceState(null, "", id); // меняем hash в URL
+          }
+        },
+        { rootMargin: "-40% 0px -50% 0px", threshold: 0.1 } // смещение для лучшего UX
+    );
+
+    sections.forEach((section) => section && observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <header className="max-w-[1320px] mx-auto fixed top-[15px] left-0 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-full z-50">
-      <div className="px-4">
-        <div className="flex items-center justify-between h-[92px]">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <Image src="/images/logo.png" alt="Logo" width={218} height={63} />
+      <header className="max-w-[1320px] mx-auto fixed top-[15px] left-0 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-full z-50">
+        <div className="px-4">
+          <div className="flex items-center justify-between h-[92px]">
+            {/* Logo */}
+            <div className="flex items-center space-x-2">
+              <Image src="/images/logo.png" alt="Logo" width={218} height={63} />
+            </div>
+
+            {/* Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              {navItems.map((item) => (
+                  <a
+                      key={item.href}
+                      href={item.href}
+                      className={`transition-colors font-normal ${
+                          activeHash === item.href
+                              ? "text-[#2F3F2D] font-bold underline decoration-dotted underline-offset-4"
+                              : "text-gray-600 hover:text-[#4F584E]"
+                      }`}
+                  >
+                    {item.label}
+                  </a>
+              ))}
+            </nav>
+
+            {/* Button */}
+            <button className="bg-[#2F3F2D] text-white px-12.5 py-4.5 rounded-full font-normal hover:bg-[#43764C] transition-colors">
+              Request a call
+            </button>
           </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-gray-600 hover:text-[#4F584E] transition-colors font-medium">
-                About the Company
-            </a>
-            <a href="#catalog" className="text-gray-600 hover:text-[#4F584E] transition-colors font-medium">
-                Catalog
-            </a>
-            <a href="#bulletin-board" className="text-gray-600 hover:text-[#4F584E] transition-colors font-medium">
-                Bulletin Board
-            </a>
-            <a href="#company-news" className="text-gray-600 hover:text-[#4F584E] transition-colors font-medium">
-              News
-            </a>
-            <a href="#contacts" className="text-gray-600 hover:text-[#4F584E] transition-colors font-medium">
-              Contacts
-            </a>
-          </nav>
-
-          {/* Login/Register Button */}
-          <button className="bg-[#2F3F2D] text-white px-12.5 py-4.5 rounded-full font-medium hover:bg-[#43764C] transition-colors">
-          Request a call
-          </button>
         </div>
-      </div>
-    </header>
+      </header>
   );
 }
