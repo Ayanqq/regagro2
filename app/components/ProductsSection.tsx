@@ -6,38 +6,46 @@ import {Headtitle} from "@/app/ui/Headtitle";
 export default function ProductsSection() {
     return (
         <section id="catalog" className="relative bg-white pt-[125px]">
-            <div className="max-w-[1320px] mx-auto h-[777px] relative z-10">
+            <div className="max-w-[1320px] mx-auto md:h-[777px] h-[663px] relative z-10">
                 {/* Background Grass Texture */}
-                <div className="absolute top-0 left-0 right-0">
-                    <img
-                        src="/images/section/section-3.png"
-                        alt="Products background"
-                        className="w-full h-full object-cover"
-                    />
+                <div className="absolute inset-0">
+                {/* Desktop Image */}
+                <img
+                  src="/images/section/section-3.png"
+                  alt="Hero background"
+                  className="w-full h-full object-cover rounded-[20px] hidden md:block"
+                />
+                {/* Mobile Image */}
+                <img
+                  src="/images/section/mobile/section-3.png"
+                  alt="Hero background mobile"
+                  className="w-full h-full rounded-[20px] md:hidden"
+                />
                 </div>
 
-                <div className="relative flex items-center px-7.5 pt-[60px] gap-[174px] z-20">
+                <div className="relative flex items-center md:flex-row flex-col md:px-7.5 px-[15px] md:pt-[60px] pt-[30px] md:gap-[174px] gap-[20px] z-20">
                     {/* Left Content */}
                     <div>
                         <Headtitle minTitle={'catalog'} title={'Products available in your country'}/>
-                        <p className="text-[17px] text-[#4F584E] mb-[18px] leading-[120%] tracking-[-2%] mt-[15px]">
+                        <p className="md:text-[17px] text-[14px] text-[#4F584E] md:mb-[18px] mb-[15px] leading-[120%] tracking-[-2%] md:mt-[15px] mt-[10px] md:max-w-[713px] max-w-[345px]">
                             Streamline animal registration with an exhaustive set of tagging tools collected in the
-                            one-stop <br/> shop. The RegAgro equipment provides free access to advanced, continuously
-                            updated IT <br/> products, helping animal owners cover the entire identification process —
-                            from individual <br/> marking to automated data collection and processing.
+                            one-stop shop. The RegAgro equipment provides free access to advanced, continuously
+                            updated IT  products, helping animal owners cover the entire identification process —
+                            from individual marking to automated data collection and processing.
                         </p>
 
-                        <Image src="/images/book.png" alt="Products" width={734} height={335}/>
+                        <Image src="/images/book.png" alt="Products" width={734} height={335} className='md:block hidden'/>
+                        <Image src="/images/book-mobile.png" alt="Products" width={345} height={260} className='md:hidden block w-full'/>
 
 
                         <button
-                            className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] mt-[21px] cursor-pointer text-[#355332] px-[55px] py-[24px] rounded-full text-[17px] leading-[120%] tracking-[-2%] font-semibold transition-colors uppercase">
+                            className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] md:w-auto w-full px-[53px] md:py-[24px] py-[18px] rounded-full md:text-[17px] md:mt-[30px] mt-[20px] text-[12px] leading-[120%] tracking-[-2%] font-semibold transition-colors uppercase cursor-pointer">
                             View the catalog
                         </button>
                     </div>
 
                     {/* Right Side - Product Features */}
-                    <div className="mt-[110px] flex flex-col gap-12 relative">
+                    <div className="mt-[110px] flex flex-col gap-12 relative md:block hidden">
                         {/* Vertical Line with Dots */}
                         <div
                             className="absolute -left-[22px] -top-[100px] bottom-0 flex flex-col items-center justify-center z-20">
@@ -74,15 +82,17 @@ export default function ProductsSection() {
                         </div>
                     </div>
 
-                    {/* Play Button */}
-                    <div className="absolute top-[60px] right-[106px] z-20 flex gap-4 items-center">
-                        <div className="text-[#4F584E] text-[12px] font-medium leading-[120%] tracking-[-2%]">
-                            Explore the company's <br/> expertise by watching <br/> the short video
+                    
+
+                    <div className="absolute md:top-[60px] top-7.5 md:right-[106px] right-4 z-20 flex gap-4 items-center">
+                      <div className="text-[#4F584E] text-[12px] hidden md:block font-normal leading-[120%] tracking-[-2%]">
+                          Explore the company’s <br /> expertise by watching <br /> the short video
                         </div>
                         <button className="cursor-pointer">
-                            <Image src="/images/play-black.png" alt="Play" width={85} height={85}/>
-                        </button>
-                    </div>
+                          <Image src="/images/play-black.png" alt="Play" width={65} height={65} className="md:w-[85px] md:h-[85px] hidden md:block" />
+                          <Image src="/images/play.png" alt="Play" width={65} height={65} className="md:w-[85px] md:h-[85px] block md:hidden" />
+                       </button>
+                   </div>
 
 
                 </div>
