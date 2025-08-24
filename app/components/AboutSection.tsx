@@ -6,54 +6,61 @@ import {Headtitle} from "@/app/ui/Headtitle";
 export default function AboutSection() {
   return (
     <section id="about" className="relative bg-white pt-[125px]">
-      <div className="max-w-[1320px] mx-auto px-7.5 h-[777px] relative z-10">
+      <div className="max-w-[1320px] mx-auto md:px-7.5 px-[15px] md:h-[777px] h-[663px] relative z-10">
         {/* Background Grass Texture */}
-        <div className="absolute top-0 left-0 right-0">
+        <div className="absolute inset-0">
+          {/* Desktop Image */}
           <img
             src="/images/section/section-2.png"
-            alt="About background"
-            className="w-full h-full object-cover"
+            alt="Hero background"
+            className="w-full h-full object-cover rounded-[20px] hidden md:block"
+          />
+          {/* Mobile Image */}
+          <img
+            src="/images/section/mobile/section-2.png"
+            alt="Hero background mobile"
+            className="w-full h-full rounded-[20px] md:hidden"
           />
         </div>
 
-        <div className="relative items-center h-full pt-[60px] z-20">
+        <div className="relative items-center h-full md:pt-[60px] pt-[30px] z-20">
           {/* Left Content */}
           <div >
             <Headtitle minTitle={'about the company'} title={'About RegAgro products and expertise'}/>
-            <p className="text-[17px] text-[#4F584E] mb-5 leading-[110%] tracking-[-2%] mt-[15px]">
-            Learn how RegAgro uses the combined power of a transformative IT company in Cyprus <br /> and three modern production facilities in China to drive innovation in animal husbandry. <br /> Start working with the world's AgriTech leader that offers an all-in-one identification <br /> solution for animal owners and a straightforward dealer program.
+            <p className="md:text-[17px] text-[14px] text-[#4F584E] mb-5 leading-[110%] tracking-[-2%] mt-[15px] md:max-w-[674px] max-w-[345px]">
+            Learn how RegAgro uses the combined power of a transformative IT company in Cyprus and three modern production facilities in China to drive innovation in animal husbandry. Start working with the world's AgriTech leader that offers an all-in-one identification solution for animal owners and a straightforward dealer program.
             </p>
 
             {/* Features Grid */}
-            <div className="flex items-center gap-14 mb-10">
-              <div className="text-center flex flex-col items-center">
-                  <Image src="/images/about/about-1.png" alt="About" width={154} height={166} />
-                <p className="text-[12px] leading-[120%] tracking-[-2%] text-[#4F584E]">The world’s leading manufacturer <br /> of comprehensive animal <br /> identification solutions</p>
+            <div className="flex flex-col md:flex-row md:items-center items-start md:gap-14 gap-2.5 md:mb-7.5 mb-[20px]">
+              <div className="md:text-center text-left flex md:flex-col flex-row md:gap-2 gap-2.5 items-center">
+                  <Image src="/images/about/about-1.png" alt="About" width={81} height={75} className='md:w-[154px] md:h-[166px]'/>
+                <p className="text-[12px] leading-[120%] tracking-[-2%] text-[#4F584E] md:max-w-[181px] max-w-[213px]">The world’s leading manufacturer of comprehensive animal identification solutions</p>
               </div>
 
-              <div className="text-center flex flex-col items-center">
-                  <Image src="/images/about/about-2.png" alt="About" width={154} height={166} />
-                <p className="text-[12px] leading-[120%] tracking-[-2%] text-[#4F584E]">Continuous animal health <br /> monitoring for disease prevention <br /> and timely response</p>
+              <div className="md:text-center text-left flex md:flex-col flex-row md:gap-2 gap-2.5 items-center">
+                  <Image src="/images/about/about-2.png" alt="About" width={81} height={75} className='md:w-[154px] md:h-[166px]'/>
+                <p className="text-[12px] leading-[120%] tracking-[-2%] text-[#4F584E] md:max-w-[181px] max-w-[213px]">Continuous animal health monitoring for disease prevention and timely response</p>
               </div>
 
-              <div className="text-center flex flex-col items-center">
-                  <Image src="/images/about/about-3.png" alt="About" width={154} height={166} />
-                <p className="text-[12px] leading-[120%] tracking-[-2%] text-[#4F584E]">The synergy of modern <br /> production, IT innovation, <br /> and robust partner support</p>
+              <div className="md:text-center text-left flex md:flex-col flex-row md:gap-2 gap-2.5 items-center">
+                  <Image src="/images/about/about-3.png" alt="About" width={81} height={75} className='md:w-[154px] md:h-[166px]'/>
+                <p className="text-[12px] leading-[120%] tracking-[-2%] text-[#4F584E] md:max-w-[181px] max-w-[213px]">The synergy of modern production, IT innovation, and robust partner support</p>
               </div>
             </div>
 
-            <button className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] px-[53px] py-[24px] rounded-full text-[17px] leading-[120%] tracking-[-2%] font-semibold transition-colors uppercase cursor-pointer">
+            <button className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] md:w-auto w-full px-[53px] md:py-[24px] py-[18px] rounded-full md:text-[17px] text-[12px] leading-[120%] tracking-[-2%] font-semibold transition-colors uppercase cursor-pointer">
               Find out more about the company
             </button>
           </div>
         </div>
 
-        <div className="absolute top-[60px] right-[106px] z-20 flex gap-4 items-center">
-          <div className="text-white text-[12px] font-normal leading-[120%] tracking-[-2%]">
+        <div className="absolute md:top-[60px] top-7.5 md:right-[106px] right-4 z-20 flex gap-4 items-center">
+          <div className="text-white text-[12px] hidden md:block font-normal leading-[120%] tracking-[-2%]">
             Explore the company’s <br /> expertise by watching <br /> the short video
           </div>
           <button className="cursor-pointer">
-            <Image src="/images/play.png" alt="Play" width={85} height={85} />
+            <Image src="/images/play.png" alt="Play" width={65} height={65} className="md:w-[85px] md:h-[85px]" />
           </button>
         </div>
       </div>
