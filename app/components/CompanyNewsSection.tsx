@@ -15,8 +15,8 @@ import "swiper/css/pagination";
 export default function CompanyNewsSection() {
     return (
         <section className="relative pt-[125px] " id={"company-news"}>
-            <Container className={"flex flex-col gap-[30px] relative"}>
-                <div className="absolute top-0 left-0 right-0 z-10">
+            <div className={"max-w-[1320px] md:h-[777px] h-[663px] mx-auto pl-4 md:px-8 z-10 flex flex-col gap-[30px] relative "}>
+                <div className="absolute inset-0">
                     <img
                         src="/images/section/section-6.png"
                         alt="About background"
@@ -24,8 +24,8 @@ export default function CompanyNewsSection() {
                     />
                     <img
                         src="/images/section/section-6-mobile.png"
-                        alt="About background"
-                        className="w-full object-cover block md:hidden h-[663px]"
+                            alt="About background"
+                            className="w-full object-cover block md:hidden h-[663px] rounded-[20px]"
                     />
                 </div>
 
@@ -66,14 +66,14 @@ export default function CompanyNewsSection() {
                         <CardNews/>
                     </div>
 
-                    <div className="mt-[20px] md:mt-[30px]">
+                    <div className="mt-[20px] md:mt-[30px] pr-[15px] md:pr-0">
                         <button
-                            className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] rounded-full py-[18px] w-full md:w-[auto] text-[12px] md:text-[17px] md:py-[24px] px-[60px] font-semibold cursor-pointer">
+                            className=" bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] rounded-full py-[18px] w-full md:w-[auto] text-[12px] md:text-[17px] md:py-[24px] px-[60px] font-semibold cursor-pointer">
                             EXPLORE THE LATEST NEWS
                         </button>
                     </div>
                 </div>
-            </Container>
+            </div>
         </section>
     );
 }
