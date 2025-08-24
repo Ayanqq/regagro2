@@ -19,7 +19,7 @@ export default function MobileAppSection() {
                     <div>
                         <div className={'max-w-[650px] flex flex-col gap-[20px]'}>
                             <VideoPlayer/>
-                            <p className={'text-[17px] font-normal text-[#4F584E]'}>Gain immediate access to the mobile
+                            <p className={'text-[17px] font-normal text-[#4F584E] leading-[120%]'}>Gain immediate access to the mobile
                                 app
                                 upon
                                 purchasing a RegAgro tagging tool. The app
