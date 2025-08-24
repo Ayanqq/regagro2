@@ -44,7 +44,7 @@ export default function Header() {
   }, []);
 
   return (
-      <header className="max-w-[1320px] mx-auto fixed top-[15px] left-0 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-full z-50">
+      <header className="max-w-[1320px] mx-auto fixed top-[15px] left-0 right-0 bg-white/95 backdrop-blur-sm rounded-full z-50">
         <div className="px-7.5">
           <div className="flex items-center justify-between h-[92px]">
             {/* Logo */}

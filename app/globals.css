@@ -13,4 +13,7 @@ html {
     scroll-behavior: smooth;
 }
 
+.right-adaptive {
+    right: clamp(40px, 20vw, 340px);
+}
 

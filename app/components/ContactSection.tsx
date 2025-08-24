@@ -6,7 +6,7 @@ export default function ContactSection() {
     return (
         <section id="contacts" className={'pt-[125px] relative'}>
             <Container className={'relative'}>
-                <div className="absolute top-0 left-0 right-[20px] z-10">
+                <div className="absolute top-0 left-0 right-[0px] z-10">
                     <img
                         src="/images/section/section-7.png"
                         alt="About background"
