@@ -3,13 +3,13 @@ import Container from "@/app/ui/Container";
 
 export default function ContactSection() {
     return (
-        <section id="contacts" className={'h-[777px] pl-[30px] pt-[60px] relative'}>
-            <Container>
-                <div className="absolute top-[60px] right-[275px] h-full -z-10 ">
+        <section id="contacts" className={'h-[777px] pl-[30px] pt-[125px] relative'}>
+            <Container className={'relative'}>
+                <div className="absolute top-0 left-0 right-[20px] z-10">
                     <img
                         src="/images/section/section-7.png"
-                        alt="contact bg"
-                        className="w-full h-full"
+                        alt="About background"
+                        className="w-full h-full object-cover"
                     />
                 </div>
                 <Headtitle minTitle={'request'} title={'Have any questions? Write to us — we’ll help you out'}/>
