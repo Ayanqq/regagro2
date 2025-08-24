@@ -24,10 +24,7 @@ export default function Header() {
             <a href="#bulletin-board" className="text-gray-600 hover:text-[#4F584E] transition-colors font-medium">
                 Bulletin Board
             </a>
-            <a href="#animal-breed" className="text-gray-600 hover:text-[#4F584E] transition-colors font-medium">
-            Animal Breed
-            </a>
-            <a href="#news" className="text-gray-600 hover:text-[#4F584E] transition-colors font-medium">
+            <a href="#company-news" className="text-gray-600 hover:text-[#4F584E] transition-colors font-medium">
               News
             </a>
             <a href="#contacts" className="text-gray-600 hover:text-[#4F584E] transition-colors font-medium">
