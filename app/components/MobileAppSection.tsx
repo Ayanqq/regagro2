@@ -6,20 +6,27 @@ export default function MobileAppSection() {
     return (
         <section id="breed" className="relative pt-[125px]">
             <Container className={'flex flex-col gap-[30px] relative'}>
-                <div className="absolute top-0 left-0 right-0px z-10">
-                    <img
-                        src="/images/section/section-5.png"
-                        alt="About background"
-                        className="w-full h-full object-cover"
-                    />
+            <div className="absolute inset-0">
+                {/* Desktop Image */}
+                <img
+                  src="/images/section/section-5.png"
+                  alt="Hero background"
+                  className="w-full h-full object-cover rounded-[20px] hidden md:block"
+                />
+                {/* Mobile Image */}
+                <img
+                  src="/images/section/mobile/section-5.png"
+                  alt="Hero background mobile"
+                  className="w-full h-full rounded-[20px] md:hidden"
+                />
                 </div>
-                <div className="z-20 relative pt-[60px]">
+                <div className="z-20 relative md:pt-[60px] pt-[30px]">
                 <Headtitle minTitle={'it solutions'} title={'Mobile app for pets and livestock'}/>
-                <div className={'flex justify-between mt-[30px]'}>
+                <div className={'flex justify-between md:mt-[30px] mt-[10px]'}>
                     <div>
                         <div className={'max-w-[650px] flex flex-col gap-[20px]'}>
-                            <VideoPlayer/>
-                            <p className={'text-[17px] font-normal text-[#4F584E] leading-[120%]'}>Gain immediate access to the mobile
+                            <div className={'md:block hidden'}><VideoPlayer/></div>
+                            <p className={'md:text-[17px] text-[14px] font-normal text-[#4F584E] leading-[120%]'}>Gain immediate access to the mobile
                                 app
                                 upon
                                 purchasing a RegAgro tagging tool. The app
@@ -28,10 +35,14 @@ export default function MobileAppSection() {
                                 vet
                                 records and animal history.</p>
                         </div>
+                        <div className={'md:hidden block mt-[15px]'}><VideoPlayer/></div>
                         <button
-                            className="cursor-pointer mt-[30px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] px-[60px] py-[24px] max-w-[420px] rounded-full font-semibold text-[#355332]">LEARN
+                            className="md:text-[17px] text-[12px] cursor-pointer mt-[30px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] max-w-[420px] rounded-full md:font-semibold md:w-auto w-full font-bold text-[#355332]">LEARN
                             MORE ABOUT THE
                             E-PASSPORT
+                        </button>
+                        <button
+                            className="md:hidden block md:text-[17px] text-[12px] cursor-pointer mt-[8px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] max-w-[420px] rounded-full md:w-auto w-full md:font-semibold font-bold text-[#355332]">Download the app
                         </button>
                     </div>
                     </div>
