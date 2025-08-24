@@ -74,8 +74,17 @@ export default function Pagination({ sections, onSectionChange }: PaginationProp
   };
 
   return (
-    <div className="fixed right-[340px] top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
-      <div className="flex flex-col items-center space-y-2">
+      <div
+          className="
+    fixed
+    right-[40px]   sm:right-[80px]
+    md:right-[160px]
+    lg:right-[240px]
+    xl:right-[340px]
+    top-1/2 transform -translate-y-1/2
+    z-40 hidden lg:block
+  "
+      >      <div className="flex right-adaptive flex-col items-center space-y-2">
         {sections.map((sectionId, index) => (
           <button
             key={sectionId}
