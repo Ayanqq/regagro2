@@ -17,3 +17,25 @@ html {
     right: clamp(40px, 20vw, 340px);
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+/* обычные точки */
+.swiper-pagination-bullet {
+    background: #000 !important; /* черные */
+    opacity: 0.3; /* неактивные более бледные */
+}
+
+/* активная точка */
+.swiper-pagination-bullet-active {
+    background: #000 !important; /* активная тоже черная */
+    opacity: 1;
+}
+
+
+
