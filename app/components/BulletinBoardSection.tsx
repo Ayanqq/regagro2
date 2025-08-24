@@ -9,7 +9,7 @@ export default function BulletinBoardSection() {
     return (
         <section id="bulletin-board" className="relative pt-[125px]">
             <Container className="relative">
-                <div className="absolute top-0 left-0 right-[20px] ">
+                <div className="absolute top-0 left-0 right-[20px]">
                     <img
                         src="/images/section/section-4.png"
                         alt="About background"
