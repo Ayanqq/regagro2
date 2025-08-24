@@ -16,7 +16,7 @@ export default function CompanyNewsSection() {
                 <div className="z-20 relative pt-[60px]">
                 <Headtitle minTitle={'updates'} title={'Company news'}/>
                 <div className={'flex flex-col gap-[30px] mt-[30px]'}>
-                    <div className={'flex justify-between flex-wrap'}>
+                    <div className={'flex gap-[15px] flex-wrap'}>
                         <CardNews/>
                         <CardNews/>
                         <CardNews/>
