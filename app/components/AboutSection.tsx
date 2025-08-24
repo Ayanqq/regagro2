@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import {Headtitle} from "@/app/ui/Headtitle";
 
 export default function AboutSection() {
   return (
@@ -8,9 +9,9 @@ export default function AboutSection() {
       <div className="max-w-[1320px] mx-auto px-4 h-[777px] relative z-10">
         {/* Background Grass Texture */}
         <div className="absolute top-0 left-0 right-0">
-          <img 
-            src="/images/section/section-2.png" 
-            alt="About background" 
+          <img
+            src="/images/section/section-2.png"
+            alt="About background"
             className="w-full h-full object-cover"
           />
         </div>
@@ -18,10 +19,8 @@ export default function AboutSection() {
         <div className="relative items-center h-full pt-[60px] z-20">
           {/* Left Content */}
           <div >
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-            About RegAgro products <br /> and expertise
-            </h2>
-            <p className="text-lg text-[#4F584E] mb-8 leading-[120%]">
+            <Headtitle minTitle={'about the company'} title={'About RegAgro products and expertise'}/>
+            <p className="text-lg text-[#4F584E] mb-8 leading-[120%] mt-[15px]">
             Learn how RegAgro uses the combined power of a transformative IT company in Cyprus <br /> and three modern production facilities in China to drive innovation in animal husbandry. <br /> Start working with the world's AgriTech leader that offers an all-in-one identification <br /> solution for animal owners and a straightforward dealer program.
             </p>
 

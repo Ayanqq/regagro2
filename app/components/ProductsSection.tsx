@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import {Headtitle} from "@/app/ui/Headtitle";
 
 export default function ProductsSection() {
   return (
@@ -8,9 +9,9 @@ export default function ProductsSection() {
       <div className="max-w-[1320px] mx-auto px-4 h-[777px] relative z-10">
         {/* Background Grass Texture */}
         <div className="absolute top-0 left-0 right-0">
-          <img 
-            src="/images/section/section-3.png" 
-            alt="Products background" 
+          <img
+            src="/images/section/section-3.png"
+            alt="Products background"
             className="w-full h-full object-cover"
           />
         </div>
@@ -18,10 +19,8 @@ export default function ProductsSection() {
         <div className="relative flex items-center pt-[60px] gap-[160px] z-20">
           {/* Left Content */}
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-              Products available in your country
-            </h2>
-            <p className="text-[17px] text-[#4F584E] mb-[18px] leading-[120%]">
+            <Headtitle minTitle={'catalog'} title={'Products available in your country'}/>
+            <p className="text-[17px] text-[#4F584E] mb-[18px] leading-[120%] mt-[15px]">
             Streamline animal registration with an exhaustive set of tagging tools collected in the one-stop shop. <br /> The RegAgro equipment provides free access to advanced, continuously updated IT <br /> products, helping animal owners cover the entire identification process — from individual <br /> marking to automated data collection and processing.
             </p>
 
@@ -70,7 +69,7 @@ export default function ProductsSection() {
             </button>
           </div>
 
-          
+
         </div>
       </div>
     </section>
