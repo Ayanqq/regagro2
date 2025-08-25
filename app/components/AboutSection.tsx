@@ -5,7 +5,7 @@ import {Headtitle} from "@/app/ui/Headtitle";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative bg-white pt-[125px]">
+    <section id="about" className="relative bg-white pt-[60px] md:pt-[125px]">
       <div className="max-w-[1320px] mx-auto md:px-7.5 px-[15px] md:h-[777px] h-[663px] relative z-10">
         {/* Background Grass Texture */}
         <div className="absolute inset-0">

@@ -4,7 +4,7 @@ import {VideoPlayer} from "@/app/ui/VideoPlayer";
 
 export default function MobileAppSection() {
     return (
-        <section id="breed" className="relative pt-[125px]">
+        <section id="breed" className="relative pt-[60px] md:pt-[125px]">
             <Container className={'flex flex-col gap-[30px] relative'}>
             <div className="absolute inset-0">
                 {/* Desktop Image */}

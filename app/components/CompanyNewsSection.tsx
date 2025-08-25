@@ -14,7 +14,7 @@ import "swiper/css/pagination";
 
 export default function CompanyNewsSection() {
     return (
-        <section className="relative pt-[125px] " id={"company-news"}>
+        <section className="relative pt-[60px] md:pt-[125px] " id={"company-news"}>
             <div className={"max-w-[1320px] md:h-[777px] h-[663px] mx-auto pl-4 md:px-8 z-10 flex flex-col gap-[30px] relative "}>
                 <div className="absolute inset-0">
                     <img

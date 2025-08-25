@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function BulletinBoardSection() {
     return (
-        <section id="bulletin-board" className="relative pt-[125px]">
+        <section id="bulletin-board" className="relative pt-[60px] md:pt-[125px]">
             <Container className="relative">
                 <div className="absolute inset-0">
                 {/* Desktop Image */}

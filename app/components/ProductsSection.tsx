@@ -5,7 +5,7 @@ import {Headtitle} from "@/app/ui/Headtitle";
 
 export default function ProductsSection() {
     return (
-        <section id="catalog" className="relative bg-white pt-[125px]">
+        <section id="catalog" className="relative bg-white pt-[60px] md:pt-[125px]">
             <div className="max-w-[1320px] mx-auto md:h-[777px] h-[663px] relative z-10">
                 {/* Background Grass Texture */}
                 <div className="absolute inset-0">
@@ -82,7 +82,7 @@ export default function ProductsSection() {
                         </div>
                     </div>
 
-                    
+
 
                     <div className="absolute md:top-[60px] top-7.5 md:right-[106px] right-4 z-20 flex gap-4 items-center">
                       <div className="text-[#4F584E] text-[12px] hidden md:block font-normal leading-[120%] tracking-[-2%]">

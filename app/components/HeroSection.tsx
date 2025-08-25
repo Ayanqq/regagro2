@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative pt-[125px]">
+    <section id="hero" className="relative pt-[60px] md:pt-[125px]">
       {/* Content */}
       <div className="max-w-[1320px] md:h-[777px] h-[663px] mx-auto md:px-7.5 px-[15px] relative z-10">
         {/* Background Image */}
@@ -31,7 +31,7 @@ export default function HeroSection() {
             <div className="px-[20px] py-[14px] bg-white/10 backdrop-blur-md border border-white w-fit rounded-full text-[12px] font-medium md:mb-2.5 mb-1">
               <h3 className="text-white leading-[100%] tracking-[0%]">welcome to regagro</h3>
             </div>
-            
+
             {/* Main headline */}
             <h1 className="font-jakarta md:text-[40px] text-[24px] font-bold md:mb-[20px] mb-[15px] leading-[110%] tracking-[-2%] md:max-w-[685px] max-w-[345px]">
               Revolutionize animal identification with this one-stop platform from a leading global manufacturer
