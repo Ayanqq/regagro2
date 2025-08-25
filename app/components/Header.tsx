@@ -1,18 +1,24 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 
 export default function Header() {
     const [activeHash, setActiveHash] = useState<string>("");
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const navItems = [
-        { href: "#about", label: "About the Company" },
-        { href: "#catalog", label: "Catalog" },
-        { href: "#bulletin-board", label: "Bulletin Board" },
-        { href: "#company-news", label: "News" },
-        { href: "#contacts", label: "Contacts" },
+        {href: "#about", label: "About the Company"},
+        {href: "#catalog", label: "Catalog"},
+        {href: "#bulletin-board", label: "Bulletin Board"},
+        {href: "#company-news", label: "News"},
+        {href: "#contacts", label: "Contacts"},
+    ];
+
+    const contactItems = [
+        {href: "#1", label: "Address"},
+        {href: "#2", label: "Phone"},
+        {href: "#3", label: "Email"},
     ];
 
     useEffect(() => {
@@ -30,7 +36,7 @@ export default function Header() {
                     }
                 });
             },
-            { threshold: 0.5 }
+            {threshold: 0.5}
         );
 
         sections.forEach((section) => {
@@ -46,7 +52,7 @@ export default function Header() {
 
     const handleNavClick = (href: string) => {
         setIsOpen(false); // закрываем меню
-        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+        document.querySelector(href)?.scrollIntoView({behavior: "smooth"});
     };
 
     return (
@@ -57,7 +63,7 @@ export default function Header() {
                     <div className="flex items-center justify-between h-[92px]">
                         {/* Logo */}
                         <div className="flex items-center space-x-2">
-                            <Image src="/images/logo.png" alt="Logo" width={218} height={63} />
+                            <Image src="/images/logo.png" alt="Logo" width={218} height={63}/>
                         </div>
 
                         {/* Navigation */}
@@ -78,7 +84,8 @@ export default function Header() {
                         </nav>
 
                         {/* Button */}
-                        <button className="bg-[#2F3F2D] text-white px-12.5 py-4.5 rounded-full leading-[120%] tracking-[-2%] font-normal hover:bg-[#43764C] transition-colors cursor-pointer">
+                        <button
+                            className="bg-[#2F3F2D] text-white px-12.5 py-4.5 rounded-full leading-[120%] tracking-[-2%] font-normal hover:bg-[#43764C] transition-colors cursor-pointer">
                             Request a call
                         </button>
                     </div>
@@ -100,15 +107,19 @@ export default function Header() {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            <path d="M1.50293 1H16.484" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M1.50293 5.99371H13.1549" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M1.48193 10.9665H14.7985" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M1.50293 1H16.484" stroke="white" strokeWidth="1.5" strokeLinecap="round"
+                                  strokeLinejoin="round"/>
+                            <path d="M1.50293 5.99371H13.1549" stroke="white" strokeWidth="1.5" strokeLinecap="round"
+                                  strokeLinejoin="round"/>
+                            <path d="M1.48193 10.9665H14.7985" stroke="white" strokeWidth="1.5" strokeLinecap="round"
+                                  strokeLinejoin="round"/>
                         </svg>
                     </button>
 
+
                     {/* Logo */}
                     <div>
-                        <Image src="/images/logo.png" alt="Logo" width={120} height={35} />
+                        <Image src="/images/logo.png" alt="Logo" width={120} height={35}/>
                     </div>
 
                     {/* Phone icon */}
@@ -132,21 +143,69 @@ export default function Header() {
 
                 {/* Dropdown menu */}
                 {isOpen && (
-                    <div className="absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 animate-fadeIn">
-                        <nav className="flex flex-col py-4">
-                            {navItems.map((item) => (
+                    <div
+                        className={`fixed inset-0 bg-header-mobile bg-[#FAFAFA] z-40 transition-transform duration-300 ease-in-out ${
+                            isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+                        }`}
+                    >
+                        <nav className="flex flex-col py-[30px] px-[15px] h-full gap-[20px]">
+                            <div className={'flex justify-between h-[47px]'}>
+                                <div>
+                                    <Image src="/images/logo.png" alt="Logo" width={120} height={35}/>
+                                </div>
+
                                 <button
-                                    key={item.href}
-                                    onClick={() => handleNavClick(item.href)}
-                                    className={`px-6 py-3 text-left text-[16px] font-medium ${
-                                        activeHash === item.href
-                                            ? "text-[#2F3F2D] font-bold underline decoration-dotted underline-offset-[4px]"
-                                            : "text-gray-700 hover:text-[#4F584E]"
-                                    }`}
+                                    onClick={() => setIsOpen(!isOpen)}
+                                    className="w-[32px] h-[32px] bg-[#2F3F2D] flex justify-center items-center rounded-full"
                                 >
-                                    {item.label}
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 8L15 15M8 8L1 1M8 8L1 15M8 8L15 1" stroke="white" stroke-width="1.5"
+                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
                                 </button>
-                            ))}
+                            </div>
+
+                            <div className={'flex flex-col gap-[30px]'}>
+
+                                <div className={'flex flex-col gap-[10px]'}>
+                                    <span
+                                        className={'font-bold text-[16px] text-[#355332] font-jakarta'}>Navigation</span>
+                                    <div className="w-full h-px bg-[#4F584E]/50"/>
+                                    {navItems.map((item) => (
+                                        <button
+                                            key={item.href}
+                                            onClick={() => handleNavClick(item.href)}
+                                            className={`text-left text-[16px] font-normal ${
+                                                activeHash === item.href
+                                                    ? "text-[#2F3F2D] font-bold underline decoration-dotted underline-offset-[4px]"
+                                                    : "text-gray-700 hover:text-[#4F584E]"
+                                            }`}
+                                        >
+                                            {item.label}
+                                        </button>
+                                    ))}
+                                </div>
+
+                                <div className={'flex flex-col gap-[10px]'}>
+                                    <span
+                                        className={'font-bold text-[16px] text-[#355332] font-jakarta'}>Contacts</span>
+                                    <div className="w-full h-px bg-[#4F584E]/50"/>
+                                    {contactItems.map((item) => (
+                                        <button
+                                            key={item.href}
+                                            onClick={() => handleNavClick(item.href)}
+                                            className={`text-left text-[16px] font-normal ${
+                                                activeHash === item.href
+                                                    ? "text-[#2F3F2D] font-bold underline decoration-dotted underline-offset-[4px]"
+                                                    : "text-gray-700 hover:text-[#4F584E]"
+                                            }`}
+                                        >
+                                            {item.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
                         </nav>
                     </div>
                 )}
