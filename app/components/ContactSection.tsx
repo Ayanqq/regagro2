@@ -27,9 +27,9 @@ export default function ContactSection({sections, setCurrentSection, currentSect
                             <div className={'flex flex-col gap-[10px] md:gap-[15px]'}>
                                 <div className={'flex flex-col md:flex md:flex-row gap-[10px] md:gap-[15px]'}>
                                     <input type={'text'} placeholder={'Your name*'}
-                                           className="md:max-w-[300px] w-full md:py-[24px] md:px-[30px] py-[16.5px] px-[20px] border-[#4F584E80]/50 border-[0.5px] rounded-full text-[14px] md:text-[17px] text-[#4F584E] font-normal h-[50px] md:h-[68px]"/>
+                                           className="md:max-w-[300px] w-full md:py-[24px] md:px-[30px] py-[16.5px] px-[20px] border-[#4F584E80]/50 border-[0.5px] rounded-full text-[14px] md:text-[17px] text-[#4F584E] font-normal h-[50px] md:h-[68px] bg-[#FAFAFA]"/>
                                     <input type={'tel'} placeholder={'Phone number*'}
-                                           className={'md:max-w-[300px] w-full md:py-[24px] md:px-[30px] py-[16.5px] px-[20px] border-[#4F584E80]/50 border-[0.5px] rounded-full text-[14px] md:text-[17px] text-[#4F584E] font-normal h-[50px] md:h-[68px]'}/>
+                                           className={'md:max-w-[300px] w-full md:py-[24px] md:px-[30px] py-[16.5px] px-[20px] border-[#4F584E80]/50 border-[0.5px] rounded-full text-[14px] md:text-[17px] text-[#4F584E] font-normal h-[50px] md:h-[68px] bg-[#FAFAFA]'}/>
                                 </div>
                                 <textarea placeholder={'Comment / Question'}
                                           className={'h-[80px] md:h-[150px] py-[18px] px-[20px] md:p-[30px] border-[#4F584E80]/50 border-[0.5px] md:w-full text-[12px] md:text-[17px] resize-none rounded-[24px] text-[#4F584E]'}></textarea>

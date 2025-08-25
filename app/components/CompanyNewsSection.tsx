@@ -7,7 +7,7 @@ import Pagination from './Pagination';
 
 // импорт swiper
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Pagination as SwiperPagination} from "swiper/modules";
+import {Pagination as PaginationSwiper} from "swiper/modules";
 
 // стили swiper
 import "swiper/css";
@@ -38,14 +38,13 @@ export default function CompanyNewsSection({sections, setCurrentSection, current
                     <div className="mt-[15px] md:mt-[30px] block md:hidden">
                         <Swiper
                             slidesPerView={1}
-                            spaceBetween={0}
                             centeredSlides={true}
-                            modules={[SwiperPagination]}
+                            modules={[PaginationSwiper]}
                             pagination={{
                                 clickable: true,
                             }}
                             style={{
-                                paddingRight: "20px",
+                                paddingRight:"50px",
                                 paddingBottom: "30px", // добавляем место для буллетов
                             }}
                         >
