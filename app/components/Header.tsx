@@ -63,7 +63,9 @@ export default function Header() {
                     <div className="flex items-center justify-between h-[92px]">
                         {/* Logo */}
                         <div className="flex items-center space-x-2">
+                            <a href={'#hero'}>
                             <Image src="/images/logo.png" alt="Logo" width={218} height={63}/>
+                            </a>
                         </div>
 
                         {/* Navigation */}

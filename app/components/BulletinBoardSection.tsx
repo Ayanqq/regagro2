@@ -50,7 +50,7 @@ export default function BulletinBoardSection() {
                         <div className={'max-w-[260px] flex flex-col absolute bottom-[180px] right-[120px]'}>
                             <h3 className={'text-[#355332] font-semibold text-[20px]'}>Benefit #2</h3>
                             <p className={'text-[#4F584E] text-[12px] font-normal'}>Flexible ad settings:</p>
-                            <div className={'flex flex-wrap gap-[3px]'}>
+                            <div className={'flex flex-wrap gap-[3px] mt-[5px]'}>
                                 <div className={'px-[14px] py-[6px] bg-[#E8E8E8] rounded-full text-[#4F584E]'}>
                                     <span className={'text-[12px]'}>purchase</span>
                                 </div>
