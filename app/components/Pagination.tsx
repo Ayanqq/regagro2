@@ -10,6 +10,7 @@ interface PaginationProps {
 export default function Pagination({ sections, onSectionChange }: PaginationProps) {
   const [activeSection, setActiveSection] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [touchStartY, setTouchStartY] = useState<number | null>(null);
 
   // 📌 Обновляем активную секцию
   const updateActiveSection = useCallback(
@@ -20,12 +21,10 @@ export default function Pagination({ sections, onSectionChange }: PaginationProp
       [sections, onSectionChange]
   );
 
-  // 📌 Поэкранный скролл (только desktop)
+  // 📌 Поэкранный скролл (колесико мыши)
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
-      if (window.innerWidth < 1024) return; // отключаем на мобилках
       e.preventDefault();
-
       if (isScrolling) return;
 
       if (e.deltaY > 0 && activeSection < sections.length - 1) {
@@ -40,6 +39,38 @@ export default function Pagination({ sections, onSectionChange }: PaginationProp
     window.addEventListener('wheel', handleWheel, { passive: false });
     return () => window.removeEventListener('wheel', handleWheel);
   }, [activeSection, isScrolling, sections, updateActiveSection]);
+
+  // 📌 Поэкранный скролл (свайпы на тачах)
+  useEffect(() => {
+    const handleTouchStart = (e: TouchEvent) => {
+      setTouchStartY(e.touches[0].clientY);
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (touchStartY === null) return;
+      const deltaY = touchStartY - e.changedTouches[0].clientY;
+
+      if (Math.abs(deltaY) < 50) return; // маленькое движение игнорим
+      if (isScrolling) return;
+
+      if (deltaY > 0 && activeSection < sections.length - 1) {
+        updateActiveSection(activeSection + 1);
+        setIsScrolling(true);
+      } else if (deltaY < 0 && activeSection > 0) {
+        updateActiveSection(activeSection - 1);
+        setIsScrolling(true);
+      }
+      setTouchStartY(null);
+    };
+
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [activeSection, isScrolling, touchStartY, sections, updateActiveSection]);
 
   // 📌 Прокручиваем к активной секции
   useEffect(() => {
