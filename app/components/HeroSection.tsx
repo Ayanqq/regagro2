@@ -1,12 +1,14 @@
 'use client';
 
 import Image from 'next/image';
+import Pagination from './Pagination';
 
-export default function HeroSection() {
+export default function HeroSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
   return (
     <section id="hero" className="relative pt-[60px] md:pt-[125px]">
       {/* Content */}
       <div className="max-w-[1320px] md:h-[777px] h-[663px] mx-auto md:px-7.5 px-[15px] relative z-10">
+        <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
         {/* Background Image */}
         <div className="absolute inset-0">
           {/* Desktop Image */}

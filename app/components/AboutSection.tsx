@@ -2,11 +2,13 @@
 
 import Image from 'next/image';
 import {Headtitle} from "@/app/ui/Headtitle";
+import Pagination from './Pagination';
 
-export default function AboutSection() {
+export default function AboutSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
   return (
     <section id="about" className="relative bg-white pt-[60px] md:pt-[125px]">
       <div className="max-w-[1320px] mx-auto md:px-7.5 px-[15px] md:h-[777px] h-[663px] relative z-10">
+        <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
         {/* Background Grass Texture */}
         <div className="absolute inset-0">
           {/* Desktop Image */}

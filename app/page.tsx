@@ -27,15 +27,14 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <Pagination sections={sections} onSectionChange={setCurrentSection} />
       
-      <HeroSection />
-      <AboutSection />
-      <ProductsSection />
-      <BulletinBoardSection />
-      <MobileAppSection />
-      <CompanyNewsSection />
-      <ContactSection />
+      <HeroSection sections={sections} setCurrentSection={setCurrentSection} currentSection={currentSection} />
+      <AboutSection sections={sections} setCurrentSection={setCurrentSection} currentSection={currentSection} />
+      <ProductsSection sections={sections} setCurrentSection={setCurrentSection} currentSection={currentSection} />
+      <BulletinBoardSection sections={sections} setCurrentSection={setCurrentSection} currentSection={currentSection} />
+      <MobileAppSection sections={sections} setCurrentSection={setCurrentSection} currentSection={currentSection} />
+      <CompanyNewsSection sections={sections} setCurrentSection={setCurrentSection} currentSection={currentSection} />
+      <ContactSection sections={sections} setCurrentSection={setCurrentSection} currentSection={currentSection} />
     </main>
   );
 }

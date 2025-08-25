@@ -3,19 +3,21 @@
 import Container from "@/app/ui/Container";
 import {Headtitle} from "@/app/ui/Headtitle";
 import {CardNews} from "@/app/ui/CardNews";
+import Pagination from './Pagination';
 
 // импорт swiper
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Pagination} from "swiper/modules";
+import {Pagination as SwiperPagination} from "swiper/modules";
 
 // стили swiper
 import "swiper/css";
 import "swiper/css/pagination";
 
-export default function CompanyNewsSection() {
+export default function CompanyNewsSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
     return (
         <section className="relative pt-[60px] md:pt-[125px] " id={"company-news"}>
             <div className={"max-w-[1320px] md:h-[777px] h-[663px] mx-auto pl-4 md:px-8 z-10 flex flex-col gap-[30px] relative "}>
+                <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
                 <div className="absolute inset-0">
                     <img
                         src="/images/section/section-6.png"
@@ -38,7 +40,7 @@ export default function CompanyNewsSection() {
                             slidesPerView={1}
                             spaceBetween={0}
                             centeredSlides={true}
-                            modules={[Pagination]}
+                            modules={[SwiperPagination]}
                             pagination={{
                                 clickable: true,
                             }}

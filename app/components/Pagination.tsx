@@ -5,10 +5,11 @@ import { useState, useEffect, useCallback } from 'react';
 interface PaginationProps {
   sections: string[];
   onSectionChange: (section: string) => void;
+  currentSection: string;
 }
 
-export default function Pagination({ sections, onSectionChange }: PaginationProps) {
-  const [activeSection, setActiveSection] = useState(0);
+export default function Pagination({ sections, onSectionChange, currentSection }: PaginationProps) {
+  const [activeSection, setActiveSection] = useState(sections.indexOf(currentSection));
   const [isScrolling, setIsScrolling] = useState(false);
   const [touchStartY, setTouchStartY] = useState<number | null>(null);
 
@@ -72,6 +73,14 @@ export default function Pagination({ sections, onSectionChange }: PaginationProp
     };
   }, [activeSection, isScrolling, touchStartY, sections, updateActiveSection]);
 
+  // 📌 Синхронизируем активную секцию с пропсом
+  useEffect(() => {
+    const newActiveIndex = sections.indexOf(currentSection);
+    if (newActiveIndex !== -1 && newActiveIndex !== activeSection) {
+      setActiveSection(newActiveIndex);
+    }
+  }, [currentSection, sections, activeSection]);
+
   // 📌 Прокручиваем к активной секции
   useEffect(() => {
     const el = document.getElementById(sections[activeSection]);
@@ -93,16 +102,13 @@ export default function Pagination({ sections, onSectionChange }: PaginationProp
   return (
       <div
           className="
-        fixed
-        right-[40px] sm:right-[80px]
-        md:right-[160px]
-        lg:right-[240px]
-        xl:right-[340px]
+        absolute
+        right-[30px]
         top-1/2 transform -translate-y-1/2
         z-40 hidden lg:block
       "
       >
-        <div className="flex flex-col items-center space-y-2">
+        <div className="flex flex-col items-center space-y-[5px]">
           {sections.map((sectionId, index) => (
               <button
                   key={sectionId}
@@ -113,10 +119,10 @@ export default function Pagination({ sections, onSectionChange }: PaginationProp
                       sections[activeSection] === 'contacts' ||
                       sections[activeSection] === 'company-news'
                           ? activeSection === index
-                              ? 'w-4 h-4 bg-[#FFDA18] border border-[#A79933]'
+                              ? 'w-[14px] h-[14px] bg-[#FFDA18] border border-[#A79933]'
                               : 'w-2 h-2 bg-[#4F584E]/50'
                           : activeSection === index
-                              ? 'w-4 h-4 bg-[#FFDA18] border border-white'
+                              ? 'w-[14px] h-[14px] bg-[#FFDA18] border border-white'
                               : 'w-2 h-2 bg-white'
                   }`}
                   title={sectionId.charAt(0).toUpperCase() + sectionId.slice(1)}

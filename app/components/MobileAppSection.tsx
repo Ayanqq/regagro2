@@ -1,11 +1,13 @@
 import {Headtitle} from "@/app/ui/Headtitle";
 import Container from "@/app/ui/Container";
 import {VideoPlayer} from "@/app/ui/VideoPlayer";
+import Pagination from './Pagination';
 
-export default function MobileAppSection() {
+export default function MobileAppSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
     return (
         <section id="breed" className="relative pt-[60px] md:pt-[125px]">
             <Container className={'flex flex-col gap-[30px] relative'}>
+                <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
             <div className="absolute inset-0">
                 {/* Desktop Image */}
                 <img

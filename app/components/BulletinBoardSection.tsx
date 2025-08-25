@@ -4,11 +4,13 @@ import Container from "@/app/ui/Container";
 import {Headtitle} from "@/app/ui/Headtitle";
 import {VideoPlayer} from "@/app/ui/VideoPlayer";
 import Image from "next/image";
+import Pagination from './Pagination';
 
-export default function BulletinBoardSection() {
+export default function BulletinBoardSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
     return (
         <section id="bulletin-board" className="relative pt-[60px] md:pt-[125px]">
             <Container className="relative">
+                <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
                 <div className="absolute inset-0">
                 {/* Desktop Image */}
                 <img
