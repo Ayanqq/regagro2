@@ -4,6 +4,7 @@ import Container from "@/app/ui/Container";
 import {Headtitle} from "@/app/ui/Headtitle";
 import {CardNews} from "@/app/ui/CardNews";
 import Pagination from './Pagination';
+import s from './index.module.css';
 
 // импорт swiper
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -43,8 +44,9 @@ export default function CompanyNewsSection({sections, setCurrentSection, current
                             pagination={{
                                 clickable: true,
                             }}
+                            className={s.slider}
                             style={{
-                                paddingRight:"50px",
+                                paddingRight:"20px",
                                 paddingBottom: "30px", // добавляем место для буллетов
                             }}
                         >

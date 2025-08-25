@@ -1,0 +1,24 @@
+.slider {
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+}
+
+/* .slider
+  [class='swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal'] {
+  bottom: 20px;
+  top: unset;
+  left: unset;
+} */
+/* .slider [class='swiper-pagination-bullet'] {
+  background-color: #ffbf47;
+  opacity: 0.5;
+  width: 5px;
+  height: 5px;
+}
+
+.slider [class='swiper-pagination-bullet swiper-pagination-bullet-active'] {
+  background-color: #ffbf47;
+  opacity: 1;
+  width: 15px;
+  height: 5px;
+  border-radius: 12px;
+} */
