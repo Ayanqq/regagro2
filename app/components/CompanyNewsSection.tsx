@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 export default function CompanyNewsSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
     return (
         <section className="relative pt-[60px] md:pt-[125px] " id={"company-news"}>
-            <div className={"max-w-[1320px] md:h-[777px] h-[663px] mx-auto pl-4 md:px-8 z-10 relative "}>
+            <div className={"max-w-[1320px] md:h-[777px] h-[700px] mx-auto pl-4 md:px-8 z-10 relative "}>
                 <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
                 <div className="absolute inset-0">
                     <img
@@ -28,7 +28,7 @@ export default function CompanyNewsSection({sections, setCurrentSection, current
                     <img
                         src="/images/section/section-6-mobile.png"
                             alt="About background"
-                            className="w-full object-cover block md:hidden h-[663px] rounded-[20px]"
+                            className="w-full object-cover block md:hidden h-[700px] rounded-[20px]"
                     />
                 </div>
 
