@@ -32,7 +32,7 @@ export default function ProductsSection({sections, setCurrentSection, currentSec
                         <div className={'max-w-[230px] md:max-w-none'}>
                             <Headtitle minTitle={'catalog'} title={'Products available in your country'}/>
                         </div>
-                        <p className="md:text-[17px] text-[14px] text-[#4F584E] md:mb-[18px] mb-[15px] leading-[120%] md:leading-[20px] tracking-[-2%] md:mt-[15px] mt-[10px] md:max-w-[713px] max-w-[345px]">
+                        <p className="md:text-[17px] text-[14px] text-[#4F584E] md:mb-[18px] mb-[15px] leading-[120%] md:leading-[20px] tracking-[-2%] md:mt-[15px] mt-[10px] md:max-w-[745px] max-w-[345px]">
                             Streamline animal registration with an exhaustive set of tagging tools collected in the
                             one-stop shop. The RegAgro equipment provides free access to advanced, continuously
                             updated IT products, helping animal owners cover the entire identification process —
