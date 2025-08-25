@@ -37,12 +37,12 @@ export default function MobileAppSection() {
                         </div>
                         <div className={'md:hidden block mt-[15px]'}><VideoPlayer/></div>
                         <button
-                            className="md:text-[17px] text-[12px] cursor-pointer mt-[30px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] max-w-[420px] rounded-full md:font-semibold md:w-auto w-full font-bold text-[#355332]">LEARN
+                            className="md:text-[17px] text-[12px] cursor-pointer mt-[30px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] w-fit rounded-full md:font-semibold md:w-auto w-full font-bold text-[#355332]">LEARN
                             MORE ABOUT THE
                             E-PASSPORT
                         </button>
                         <button
-                            className="md:hidden block md:text-[17px] text-[12px] cursor-pointer mt-[8px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] max-w-[420px] rounded-full md:w-auto w-full md:font-semibold font-bold text-[#355332]">Download the app
+                            className="md:hidden block md:text-[17px] text-[12px] cursor-pointer mt-[8px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] max-w-[420px] rounded-full md:w-auto w-full md:font-semibold font-bold text-[#355332]">DOWNLOAD THE APP
                         </button>
                     </div>
                     </div>

@@ -17,13 +17,13 @@ export const VideoPlayer = () => {
     };
 
     return (
-        <div className="relative w-full max-w-[620px] aspect-video rounded-[24px] overflow-hidden ">
+        <div className="relative w-full aspect-video rounded-[16px] sm:rounded-[24px] overflow-hidden mx-auto">
             {/* YouTube iframe */}
             <YouTube
                 videoId="dQw4w9WgXcQ"
                 opts={{
-                    width: 620,
-                    height: 348,
+                    width: "100%",
+                    height: "100%",
                     playerVars: { controls: 0 },
                 }}
                 onReady={onReady}
@@ -47,9 +47,9 @@ export const VideoPlayer = () => {
                         onClick={handlePlay}
                         className="absolute inset-0 flex items-center justify-center"
                     >
-                        <div className="bg-orange-500 w-14 sm:w-16 h-14 sm:h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
-                            {/* Белый треугольник Play (увеличен для адаптива) */}
-                            <div className="w-0 h-0 border-l-8 sm:border-l-12 border-l-white border-t-4 sm:border-t-6 border-t-transparent border-b-4 sm:border-b-6 border-b-transparent ml-1"></div>
+                        <div className="bg-orange-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                            {/* Play-иконка */}
+                            <div className="w-0 h-0 border-l-[10px] sm:border-l-[14px] border-l-white border-t-[6px] sm:border-t-[8px] border-t-transparent border-b-[6px] sm:border-b-[8px] border-b-transparent ml-1"></div>
                         </div>
                     </button>
                 </div>
