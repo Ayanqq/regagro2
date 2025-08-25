@@ -28,10 +28,10 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
                 <div className="relative items-center h-full md:pt-[60px] pt-[30px] z-20">
                     {/* Left Content */}
                     <div>
-                        <div className={'max-w-[240px] md:max-w-none'}>
+                        <div className={'max-w-[240px] md:max-w-[564px]'}>
                             <Headtitle minTitle={'about the company'} title={'About RegAgro products and expertise'}/>
                         </div>
-                        <p className="md:text-[17px] text-[14px] text-[#4F584E] mb-5 leading-[110%] md:leading-[20px] tracking-[-2%] mt-[15px] md:max-w-[674px] max-w-[345px]">
+                        <p className="md:text-[17px] text-[14px] text-[#4F584E] mb-5 leading-[110%] md:leading-[20px] tracking-[-2%] mt-[15px] md:max-w-[691px] max-w-[345px]">
                             Learn how RegAgro uses the combined power of a transformative IT company in Cyprus and three
                             modern production facilities in China to drive innovation in animal husbandry. Start working
                             with the world's AgriTech leader that offers an all-in-one identification solution for
@@ -44,7 +44,9 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
                             <div
                                 className="md:text-center text-left flex md:flex-col flex-row md:gap-2 gap-2.5 items-center">
                                 <Image src="/images/about/about-1.png" alt="About" width={81} height={75}
-                                       className='md:w-[154px] md:h-[166px]'/>
+                                       className='block md:hidden'/>
+                                <Image src="/images/about/about-dec-1.png" alt="About" width={154} height={166}
+                                       className='hidden md:block'/>
                                 <p className="text-[12px] leading-[120%] md:leading-[14px] tracking-[-2%] text-[#4F584E] md:max-w-[181px] max-w-[213px]">The
                                     world’s leading manufacturer of comprehensive animal identification solutions</p>
                             </div>
@@ -52,7 +54,9 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
                             <div
                                 className="md:text-center text-left flex md:flex-col flex-row md:gap-2 gap-2.5 items-center">
                                 <Image src="/images/about/about-2.png" alt="About" width={81} height={75}
-                                       className='md:w-[154px] md:h-[166px]'/>
+                                       className='block md:hidden'/>
+                                <Image src="/images/about/about-dec-2.png" alt="About" width={154} height={166}
+                                       className='hidden md:block'/>
                                 <p className="text-[12px] leading-[120%] md:leading-[14px] tracking-[-2%] text-[#4F584E] md:max-w-[181px] max-w-[213px]">Continuous
                                     animal health monitoring for disease prevention and timely response</p>
                             </div>
@@ -60,7 +64,9 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
                             <div
                                 className="md:text-center text-left flex md:flex-col flex-row md:gap-2 gap-2.5 items-center">
                                 <Image src="/images/about/about-3.png" alt="About" width={81} height={75}
-                                       className='md:w-[154px] md:h-[166px]'/>
+                                       className='block md:hidden'/>
+                                <Image src="/images/about/about-dec-3.png" alt="About" width={154} height={166}
+                                       className='hidden md:block'/>
                                 <p className="text-[12px] leading-[120%] md:leading-[14px] tracking-[-2%] text-[#4F584E] md:max-w-[181px] max-w-[213px]">The
                                     synergy of modern production, IT innovation, and robust partner support</p>
                             </div>

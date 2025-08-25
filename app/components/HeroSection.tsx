@@ -35,7 +35,7 @@ export default function HeroSection({sections, setCurrentSection, currentSection
             </div>
 
             {/* Main headline */}
-            <h1 className="font-jakarta md:text-[40px] text-[24px] font-bold md:mb-[20px] mb-[15px] leading-[110%] md:leading-[44px] tracking-[-2%] md:max-w-[685px] max-w-[345px]">
+            <h1 className="font-jakarta md:text-[40px] text-[24px] font-bold md:mb-[20px] mb-[15px] leading-[110%] md:leading-[44px] tracking-[-2%] md:max-w-[667px] max-w-[345px]">
               Revolutionize animal identification with this one-stop platform from a leading global manufacturer
             </h1>
 
