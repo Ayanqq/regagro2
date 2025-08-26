@@ -10,7 +10,7 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
       <div className="max-w-[1320px] mx-auto md:px-7.5 px-[15px] md:h-[777px] h-[663px] relative z-10">
         <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
         {/* Background Grass Texture */}
-        <div className="absolute inset-0 left-[55px] md:left-[0]">
+        <div className="absolute inset-0">
           {/* Desktop Image */}
           <img
             src="/images/section/section-2.png"
@@ -21,7 +21,7 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
           <img
             src="/images/section/mobile/section-2.png"
             alt="Hero background mobile"
-            className="w-full h-full rounded-[20px] md:hidden"
+            className="w-full h-full rounded-[20px] md:hidden object-cover"
           />
         </div>
 
