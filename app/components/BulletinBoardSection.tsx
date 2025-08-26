@@ -33,7 +33,7 @@ export default function BulletinBoardSection({sections, setCurrentSection, curre
                     <Headtitle minTitle={'it solutions'} title={'Professional bulletin board'}/>
                     <div className={'flex md:flex-row flex-col relative'}>
                         <div>
-                            <div className={'w-full md:w-[650px] flex flex-col md:gap-[20px] gap-[15px]'}>
+                            <div className={'w-full md:w-[650px] flex flex-col md:gap-[10px] gap-[15px]'}>
                                 <p className={'md:text-[17px] text-[14px] font-normal text-[#4F584E] leading-[120%] mt-[15px] md:max-w-[609px] max-w-[345px]'}>Verify
                                     animals’ breed and
                                     registration

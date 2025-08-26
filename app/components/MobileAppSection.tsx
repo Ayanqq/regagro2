@@ -28,7 +28,7 @@ export default function MobileAppSection({sections, setCurrentSection, currentSe
                     </div>
                     <div className={'flex justify-between md:mt-[20px] mt-[10px]'}>
                         <div>
-                            <div className={'max-w-[650px] flex flex-col gap-[20px]'}>
+                            <div className={'max-w-[650px] flex flex-col gap-[10px]'}>
                                 <div className={'md:block hidden'}><VideoPlayer text={'watch the short video to find out the epassport features and opportunities'}/></div>
                                 <p className={'md:text-[17px] text-[14px] font-normal text-[#4F584E] leading-[120%]'}>Gain
                                     immediate access to the mobile
