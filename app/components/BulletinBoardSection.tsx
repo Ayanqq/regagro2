@@ -101,7 +101,7 @@ export default function BulletinBoardSection({sections, setCurrentSection, curre
                                 <div className={'flex flex-row gap-[8px]'}>
                                     <Image alt={'bulletinboard'} src="/images/bulletinboard/bullet-3.png" width={28}
                                            height={28} className="size-[28px]"/>
-                                    <p className={'text-[#4F584E] text-[14px] font-normal leading-[120%]'}>
+                                    <p className={'text-[#4F584E] text-[14px] font-normal leading-[120%] max-w-[314px] md:max-w-none'}>
                                         03. Flexible ad settings: purchase, sale, giveaway, found / lost, mating</p>
                                 </div>
                             </div>

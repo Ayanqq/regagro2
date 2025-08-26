@@ -19,7 +19,7 @@ export default function CompanyNewsSection({sections, setCurrentSection, current
         <section className="relative pt-[60px] md:pt-[125px] " id={"company-news"}>
             <div className={"max-w-[1320px] md:min-h-[777px] min-h-[700px] mx-auto pl-4 md:px-8 z-10 relative "}>
                 <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 left-[110px] md:left-[0]">
                     <img
                         src="/images/section/section-6.png"
                         alt="About background"
@@ -28,7 +28,7 @@ export default function CompanyNewsSection({sections, setCurrentSection, current
                     <img
                         src="/images/section/section-6-mobile.png"
                             alt="About background"
-                            className="w-full object-cover block md:hidden h-[700px] rounded-[20px]"
+                            className="w-full object-contain block md:hidden h-full rounded-[20px]"
                     />
                 </div>
 
