@@ -31,7 +31,7 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
                         <div className={'max-w-[240px] md:max-w-[564px]'}>
                             <Headtitle minTitle={'about the company'} title={'About RegAgro products and expertise'}/>
                         </div>
-                        <p className="md:text-[17px] text-[14px] text-[#4F584E] mb-[14px] leading-[110%] md:leading-[20px] tracking-[-2%] mt-[15px] md:max-w-[691px] max-w-[315px]">
+                        <p className="md:text-[17px] text-[14px] text-[#4F584E] mb-[16px] leading-[110%] md:leading-[20px] tracking-[-2%] mt-[15px] md:max-w-[691px] max-w-[315px]">
                             Learn how RegAgro uses the combined power of a transformative IT company in Cyprus and three
                             modern production facilities in China to drive innovation in animal husbandry. Start working
                             with the world's AgriTech leader that offers an all-in-one identification solution for
