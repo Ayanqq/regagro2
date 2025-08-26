@@ -48,7 +48,7 @@ export const VideoPlayer = ({text}: { text: string }) => {
                         className="absolute inset-0 flex items-center justify-center"
                     >
                         <div
-                            className="bg-orange-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                            className="bg-orange-500 w-5 h-5 md:w-12 md:h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
                             {/* Play-иконка */}
                             <div
                                 className="w-0 h-0 border-l-[10px] sm:border-l-[14px] border-l-white border-t-[6px] sm:border-t-[8px] border-t-transparent border-b-[6px] sm:border-b-[8px] border-b-transparent ml-1"></div>
