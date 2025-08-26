@@ -45,7 +45,7 @@ export default function BulletinBoardSection({sections, setCurrentSection, curre
                                 <VideoPlayer text={'watch the short video to learn more about the platform'}/>
                             </div>
                             <button
-                                className="md:block hidden md:text-[17px] text-[14px] md:mt-[30px] mt-[20px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] md:w-auto w-full max-w-[420px] rounded-full font-semibold text-[#355332] cursor-pointer leading-[120%] tracking-[-2%]">
+                                className="md:block hidden md:text-[17px] text-[14px] md:mt-[20px] mt-[20px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] md:w-auto w-full max-w-[420px] rounded-full font-semibold text-[#355332] cursor-pointer leading-[120%] tracking-[-2%]">
                                 OPEN THE BULLETIN BOARD
                             </button>
                         </div>
