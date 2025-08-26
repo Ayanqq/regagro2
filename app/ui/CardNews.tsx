@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const CardNews = () => {
     return (
-        <div className={'flex flex-col mb-[5px] mr-[10px] gap-[15px] bg-[#FAFAFA] md:bg-transparent max-w-[370px] md:max-w-[385px] px-[20px] pb-[40px] pt-[20px] rounded-[18px] relative md:static'}>
+        <div className={'flex flex-col mb-[5px] mr-[10px] gap-[15px] bg-[#FAFAFA] md:bg-transparent max-w-[370px] md:max-w-[385px] px-[20px] pb-[40px] pt-[20px] md:px-[0] md:pb-[0] md:pt-[0] rounded-[18px] relative md:static'}>
             <div className={'relative'}>
                 <Image src={'/images/news/cow1.jpg'} alt={'cow'} height={200} width={385} className={'rounded-[24px] h-[200px]'}/>
                 <div className={'bg-[#43764C] absolute top-[15px] right-[15px] rounded-full font-medium py-[6px] px-[14px] text-white text-[12px] hidden md:block'}>
