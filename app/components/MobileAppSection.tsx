@@ -29,7 +29,7 @@ export default function MobileAppSection({sections, setCurrentSection, currentSe
                     <div className={'flex justify-between md:mt-[30px] mt-[10px]'}>
                         <div>
                             <div className={'max-w-[650px] flex flex-col gap-[20px]'}>
-                                <div className={'md:block hidden'}><VideoPlayer/></div>
+                                <div className={'md:block hidden'}><VideoPlayer text={'watch the short video to find out the epassport features and opportunities'}/></div>
                                 <p className={'md:text-[17px] text-[14px] font-normal text-[#4F584E] leading-[120%]'}>Gain
                                     immediate access to the mobile
                                     app
@@ -40,7 +40,7 @@ export default function MobileAppSection({sections, setCurrentSection, currentSe
                                     vet
                                     records and animal history.</p>
                             </div>
-                            <div className={'md:hidden block mt-[15px]'}><VideoPlayer/></div>
+                            <div className={'md:hidden block mt-[15px]'}><VideoPlayer text={'watch the short video to find out the epassport features and opportunities'}/></div>
                             <button
                                 className="md:text-[17px] text-[12px] cursor-pointer mt-[30px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] w-fit rounded-full md:font-semibold md:w-auto w-full font-bold text-[#355332]">LEARN
                                 MORE ABOUT THE
