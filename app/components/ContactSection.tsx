@@ -8,7 +8,7 @@ export default function ContactSection({sections, setCurrentSection, currentSect
         <section id="contacts" className={'pt-[60px] md:pt-[125px] relative'}>
             <Container className={'relative'}>
                 <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
-                <div className="absolute top-0 left-0 right-[0px] bottom-[0px] z-10">
+                <div className="absolute top-0 left-0 right-0 bottom-[0px] z-10">
                     <img
                         src="/images/section/section-7.png"
                         alt="About background"
@@ -17,7 +17,7 @@ export default function ContactSection({sections, setCurrentSection, currentSect
                     <img
                         src="/images/section/section-7-mobile.png"
                         alt="About background"
-                        className="w-full h-full object-cover block md:hidden"
+                        className="w-full h-full object-contain block md:hidden"
                     />
                 </div>
                 <div className="z-20 relative pt-[30px] md:pt-[60px]">

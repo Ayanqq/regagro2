@@ -188,24 +188,24 @@ export default function Header() {
                                     ))}
                                 </div>
 
-                                <div className={'flex flex-col gap-[10px]'}>
-                                    <span
-                                        className={'font-bold text-[16px] text-[#355332] font-jakarta'}>Contacts</span>
-                                    <div className="w-full h-px bg-[#4F584E]/50"/>
-                                    {contactItems.map((item) => (
-                                        <button
-                                            key={item.href}
-                                            onClick={() => handleNavClick(item.href)}
-                                            className={`text-left text-[16px] font-normal ${
-                                                activeHash === item.href
-                                                    ? "text-[#2F3F2D] font-bold underline decoration-dotted underline-offset-[4px]"
-                                                    : "text-gray-700 hover:text-[#4F584E]"
-                                            }`}
-                                        >
-                                            {item.label}
-                                        </button>
-                                    ))}
-                                </div>
+                                {/*<div className={'flex flex-col gap-[10px]'}>*/}
+                                {/*    <span*/}
+                                {/*        className={'font-bold text-[16px] text-[#355332] font-jakarta'}>Contacts</span>*/}
+                                {/*    <div className="w-full h-px bg-[#4F584E]/50"/>*/}
+                                {/*    {contactItems.map((item) => (*/}
+                                {/*        <button*/}
+                                {/*            key={item.href}*/}
+                                {/*            onClick={() => handleNavClick(item.href)}*/}
+                                {/*            className={`text-left text-[16px] font-normal ${*/}
+                                {/*                activeHash === item.href*/}
+                                {/*                    ? "text-[#2F3F2D] font-bold underline decoration-dotted underline-offset-[4px]"*/}
+                                {/*                    : "text-gray-700 hover:text-[#4F584E]"*/}
+                                {/*            }`}*/}
+                                {/*        >*/}
+                                {/*            {item.label}*/}
+                                {/*        </button>*/}
+                                {/*    ))}*/}
+                                {/*</div>*/}
                             </div>
                         </nav>
                     </div>
