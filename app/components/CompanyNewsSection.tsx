@@ -28,7 +28,7 @@ export default function CompanyNewsSection({sections, setCurrentSection, current
                     <img
                         src="/images/section/section-6-mobile.png"
                             alt="About background"
-                            className="w-full object-contain block md:hidden h-full rounded-[20px]"
+                            className="w-full block md:hidden h-full rounded-[20px] object-cover"
                     />
                 </div>
 
