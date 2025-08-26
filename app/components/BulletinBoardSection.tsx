@@ -107,7 +107,7 @@ export default function BulletinBoardSection({sections, setCurrentSection, curre
                             </div>
                         </div>
                         <button
-                            className="md:hidden block md:text-[17px] text-[14px] md:mt-[30px] mt-[20px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] md:w-auto w-full max-w-[420px] rounded-full font-semibold text-[#355332] cursor-pointer leading-[120%] tracking-[-2%]">
+                            className="md:hidden block md:text-[17px] text-[14px] md:mt-[30px] mt-[20px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] md:w-auto w-full max-w-[420px] rounded-full font-bold text-[#355332] cursor-pointer leading-[120%] tracking-[-2%]">
                             OPEN THE BULLETIN BOARD
                         </button>
                         <div className={'absolute right-[400px] top-[150px]'}>

@@ -149,7 +149,7 @@ export default function Header() {
                             isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
                         }`}
                     >
-                        <nav className="flex flex-col py-[30px] px-[15px] h-full gap-[20px]">
+                        <nav className="flex flex-col py-[30px] px-[15px] h-full gap-[20px] bg-black/10">
                             <div className={'flex justify-between h-[47px]'}>
                                 <div>
                                     <Image src="/images/logo.png" alt="Logo" width={120} height={35}/>

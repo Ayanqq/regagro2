@@ -8,7 +8,7 @@ export default function ContactSection({sections, setCurrentSection, currentSect
         <section id="contacts" className={'pt-[60px] md:pt-[125px] relative'}>
             <Container className={'relative'}>
                 <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
-                <div className="absolute top-0 left-0 right-0 bottom-[0px] z-10">
+                <div className="absolute top-0 left-[55px] md:left-0 right-0 bottom-[0px] z-10">
                     <img
                         src="/images/section/section-7.png"
                         alt="About background"
@@ -40,7 +40,7 @@ export default function ContactSection({sections, setCurrentSection, currentSect
 
                             </div>
                             <button type={'submit'}
-                                    className={'bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:w-full py-[18px] md:py-[24px] text-[12px] md:text-[17px] font-semibold rounded-full cursor-pointer text-[#355332]'}>SUBMIT
+                                    className={'bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:w-full py-[18px] md:py-[24px] text-[12px] md:text-[17px] font-bold rounded-full cursor-pointer text-[#355332]'}>SUBMIT
                                 A REQUEST
                             </button>
                         </form>

@@ -71,7 +71,7 @@ export default function CompanyNewsSection({sections, setCurrentSection, current
 
                     <div className="mt-[20px] md:mt-[30px] pr-[15px] md:pr-0">
                         <button
-                            className=" bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] rounded-full py-[18px] w-full md:w-[auto] text-[12px] md:text-[17px] md:py-[24px] px-[60px] font-semibold cursor-pointer">
+                            className=" bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] rounded-full py-[18px] w-full md:w-[auto] text-[12px] md:text-[17px] md:py-[24px] px-[60px] font-bold cursor-pointer">
                             EXPLORE THE LATEST NEWS
                         </button>
                     </div>

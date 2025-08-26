@@ -46,7 +46,7 @@ export default function ProductsSection({sections, setCurrentSection, currentSec
 
 
                         <button
-                            className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] md:w-auto w-full px-[53px] md:py-[24px] py-[18px] rounded-full md:text-[17px] md:mt-[30px] mt-[20px] text-[12px] leading-[120%] md:leading-[20px] tracking-[-2%] font-semibold transition-colors uppercase cursor-pointer">
+                            className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] md:w-auto w-full px-[53px] md:py-[24px] py-[18px] rounded-full md:text-[17px] md:mt-[30px] mt-[20px] text-[12px] leading-[120%] md:leading-[20px] tracking-[-2%] font-bold transition-colors uppercase cursor-pointer">
                             View the catalog
                         </button>
                     </div>
