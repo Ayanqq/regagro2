@@ -19,7 +19,7 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
           />
           {/* Mobile Image */}
           <img
-            src="/images/section/mobile/section-2.png"
+            src="/images/section/mobile/Frame%20139.png"
             alt="Hero background mobile"
             className="w-full h-full rounded-[20px] md:hidden object-cover"
           />
