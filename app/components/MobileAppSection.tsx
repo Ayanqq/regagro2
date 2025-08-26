@@ -42,12 +42,12 @@ export default function MobileAppSection({sections, setCurrentSection, currentSe
                             </div>
                             <div className={'md:hidden block mt-[15px]'}><VideoPlayer text={'watch the short video to find out the epassport features and opportunities'}/></div>
                             <button
-                                className="md:text-[17px] text-[12px] cursor-pointer mt-[30px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] w-fit rounded-full md:font-  bold md:w-auto w-full font-bold text-[#355332]">LEARN
+                                className="hover:bg-gradient-to-r hover:from-[#FFE34F] hover:to-[#FFF0A4] md:text-[17px] text-[12px] cursor-pointer mt-[30px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] w-fit rounded-full md:font-  bold md:w-auto w-full font-bold text-[#355332]">LEARN
                                 MORE ABOUT THE
                                 E-PASSPORT
                             </button>
                             <button
-                                className="md:hidden block md:text-[17px] text-[12px] cursor-pointer mt-[8px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] max-w-[420px] rounded-full md:w-auto w-full md:font-semibold font-bold text-[#355332]">DOWNLOAD
+                                className="hover:bg-gradient-to-r hover:from-[#FFE34F] hover:to-[#FFF0A4] md:hidden block md:text-[17px] text-[12px] cursor-pointer mt-[8px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] max-w-[420px] rounded-full md:w-auto w-full md:font-semibold font-bold text-[#355332]">DOWNLOAD
                                 THE APP
                             </button>
                         </div>

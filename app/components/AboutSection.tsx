@@ -73,7 +73,7 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
                         </div>
 
                         <button
-                            className="bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] md:w-auto w-full px-[53px] md:py-[24px] py-[18px] rounded-full md:text-[17px] text-[12px] leading-[120%] tracking-[-2%] font-bold transition-colors uppercase cursor-pointer">
+                            className="hover:bg-gradient-to-r hover:from-[#FFE34F] hover:to-[#FFF0A4] bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] md:w-auto w-full px-[53px] md:py-[24px] py-[18px] rounded-full md:text-[17px] text-[12px] leading-[120%] tracking-[-2%] font-bold transition-colors uppercase cursor-pointer">
                             Find out more about the company
                         </button>
                     </div>

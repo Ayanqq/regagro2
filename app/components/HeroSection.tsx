@@ -46,7 +46,7 @@ export default function HeroSection({sections, setCurrentSection, currentSection
 
             {/* Primary CTA Button with red dot */}
             <div className="flex items-center gap-3">
-              <button className="bg-[#FFDA18] text-[#355332] md:px-[55px] px-[20px] md:py-[24px] py-[18px] md:w-auto w-full rounded-full md:text-[17px] text-[12px] leading-[120%] tracking-[-2%] font-bold transition-colors cursor-pointer">
+              <button className="hover:bg-gradient-to-r hover:from-[#FFE34F] hover:to-[#FFF0A4] bg-[#FFDA18] text-[#355332] md:px-[55px] px-[20px] md:py-[24px] py-[18px] md:w-auto w-full rounded-full md:text-[17px] text-[12px] leading-[120%] tracking-[-2%] font-bold transition-colors cursor-pointer">
                 LEARN MORE
               </button>
             </div>

@@ -45,18 +45,18 @@ export default function BulletinBoardSection({sections, setCurrentSection, curre
                                 <VideoPlayer text={'watch the short video to learn more about the platform'}/>
                             </div>
                             <button
-                                className="md:block hidden md:text-[17px] text-[14px] md:mt-[20px] mt-[20px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] md:w-auto w-full max-w-[420px] rounded-full font-semibold text-[#355332] cursor-pointer leading-[120%] tracking-[-2%]">
+                                className="hover:bg-gradient-to-r hover:from-[#FFE34F] hover:to-[#FFF0A4] md:block hidden md:text-[17px] text-[14px] md:mt-[20px] mt-[20px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] md:w-auto w-full max-w-[420px] rounded-full font-semibold text-[#355332] cursor-pointer leading-[120%] tracking-[-2%]">
                                 OPEN THE BULLETIN BOARD
                             </button>
                         </div>
                         <div className={' flex-col gap-[120px] md:block hidden'}>
-                            <div className={'max-w-[230px] flex flex-col absolute top-[90px] right-[280px]'}>
+                            <div className={'max-w-[230px] flex flex-col absolute top-[70px] right-[280px]'}>
                                 <h3 className={'text-[#355332] font-semibold text-[20px]'}>Benefit #1</h3>
                                 <p className={'text-[#4F584E] text-[12px] font-normal leading-[120%]'}>Automatic animal
                                     ePassport
                                     retrieval from local veterinary authorities</p>
                             </div>
-                            <div className={'max-w-[260px] flex flex-col absolute bottom-[180px] right-[120px]'}>
+                            <div className={'max-w-[260px] flex flex-col absolute bottom-[200px] right-[120px]'}>
                                 <h3 className={'text-[#355332] font-semibold text-[20px]'}>Benefit #2</h3>
                                 <p className={'text-[#4F584E] text-[12px] font-normal'}>Flexible ad settings:</p>
                                 <div className={'flex flex-wrap gap-[3px] mt-[5px]'}>
@@ -77,7 +77,7 @@ export default function BulletinBoardSection({sections, setCurrentSection, curre
                                     </div>
                                 </div>
                             </div>
-                            <div className={'max-w-[230px] flex flex-col  absolute bottom-[20px] right-[280px]'}>
+                            <div className={'max-w-[230px] flex flex-col  absolute bottom-[40px] right-[280px]'}>
                                 <h3 className={'text-[#355332] font-semibold text-[20px]'}>Benefit #3</h3>
                                 <p className={'text-[#4F584E] text-[12px] font-normal leading-[120%]'}>Integration with
                                     a mobile app for
@@ -110,7 +110,7 @@ export default function BulletinBoardSection({sections, setCurrentSection, curre
                             className="md:hidden block md:text-[17px] text-[14px] md:mt-[30px] mt-[20px] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:px-[60px] md:py-[24px] py-[18px] md:w-auto w-full max-w-[420px] rounded-full font-bold text-[#355332] cursor-pointer leading-[120%] tracking-[-2%]">
                             OPEN THE BULLETIN BOARD
                         </button>
-                        <div className={'absolute right-[400px] top-[150px]'}>
+                        <div className={'absolute right-[400px] top-[130px]'}>
                             <Image src={'/images/bulletinboard/Group 65-min.png'} width={393} height={325}
                                    alt={'decoration'}/>
                         </div>

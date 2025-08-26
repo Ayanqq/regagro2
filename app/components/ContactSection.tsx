@@ -40,7 +40,7 @@ export default function ContactSection({sections, setCurrentSection, currentSect
 
                             </div>
                             <button type={'submit'}
-                                    className={'bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:w-full py-[18px] md:py-[24px] text-[12px] md:text-[17px] font-bold rounded-full cursor-pointer text-[#355332]'}>SUBMIT
+                                    className={'hover:bg-gradient-to-r hover:from-[#FFE34F] hover:to-[#FFF0A4] bg-[linear-gradient(90deg,#FFDA18_0%,#FFE55E_100%)] md:w-full py-[18px] md:py-[24px] text-[12px] md:text-[17px] font-bold rounded-full cursor-pointer text-[#355332]'}>SUBMIT
                                 A REQUEST
                             </button>
                         </form>
