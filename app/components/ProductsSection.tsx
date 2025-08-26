@@ -26,7 +26,7 @@ export default function ProductsSection({sections, setCurrentSection, currentSec
                 </div>
 
                 <div
-                    className="relative flex items-center md:flex-row flex-col md:px-7.5 px-[15px] md:pt-[60px] pt-[30px] md:gap-[174px] gap-[20px] z-20">
+                    className="relative flex items-start md:items-center md:flex-row flex-col md:px-7.5 px-[15px] md:pt-[60px] pt-[30px] md:gap-[174px] gap-[20px] z-20">
                     {/* Left Content */}
                     <div>
                         <div className={'max-w-[230px] md:max-w-none'}>

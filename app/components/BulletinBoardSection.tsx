@@ -49,7 +49,7 @@ export default function BulletinBoardSection({sections, setCurrentSection, curre
                                 OPEN THE BULLETIN BOARD
                             </button>
                         </div>
-                        <div className={'flex flex-col gap-[120px] md:block hidden'}>
+                        <div className={' flex-col gap-[120px] md:block hidden'}>
                             <div className={'max-w-[230px] flex flex-col absolute top-[90px] right-[280px]'}>
                                 <h3 className={'text-[#355332] font-semibold text-[20px]'}>Benefit #1</h3>
                                 <p className={'text-[#4F584E] text-[12px] font-normal leading-[120%]'}>Automatic animal
