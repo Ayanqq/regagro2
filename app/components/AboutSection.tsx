@@ -3,9 +3,12 @@
 import Image from 'next/image';
 import {Headtitle} from "@/app/ui/Headtitle";
 import Pagination from './Pagination';
+import { useState } from 'react';
 
 export default function AboutSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
-  return (
+    const [isHovered, setIsHovered] = useState(false);
+  
+    return (
     <section id="about" className="relative bg-white pt-[60px] md:pt-[125px]">
       <div className="max-w-[1320px] mx-auto md:px-7.5 px-[15px] md:h-[777px] h-[663px] relative z-10">
         <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
@@ -83,10 +86,18 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
                     <div className="text-white text-[12px] hidden md:block font-normal leading-[120%] md:leading-[14px] tracking-[-2%]">
                         Explore the company’s <br/> expertise by watching <br/> the short video
                     </div>
-                    <button className="cursor-pointer">
-                        <Image src="/images/play.png" alt="Play" width={65} height={65}
-                               className="md:w-[85px] md:h-[85px]"/>
-                    </button>
+                    <button 
+              className="cursor-pointer md:order-2 order-1"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <Image 
+                src={isHovered ? "/images/play-hover.png" : "/images/play.png"} 
+                alt="Play" 
+                width={65} height={65}
+                className="md:w-[85px] md:h-[85px]"
+              />
+            </button>
                 </div>
             </div>
         </section>

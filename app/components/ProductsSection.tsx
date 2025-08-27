@@ -3,8 +3,10 @@
 import Image from 'next/image';
 import {Headtitle} from "@/app/ui/Headtitle";
 import Pagination from './Pagination';
+import { useState } from 'react';
 
 export default function ProductsSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <section id="catalog" className="relative bg-white pt-[60px] md:pt-[125px]">
             <div className="max-w-[1320px] mx-auto md:h-[777px] h-[663px] relative z-10">
@@ -96,8 +98,8 @@ export default function ProductsSection({sections, setCurrentSection, currentSec
                             className="text-[#4F584E] text-[12px] hidden md:block font-normal leading-[120%] tracking-[-2%]">
                             Explore the company’s <br/> expertise by watching <br/> the short video
                         </div>
-                        <button className="cursor-pointer">
-                            <Image src="/images/play-black.png" alt="Play" width={65} height={65}
+                        <button className="cursor-pointer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                            <Image src={isHovered ? "/images/play-black-hover.png" : "/images/play-black.png"} alt="Play" width={65} height={65}
                                    className="md:w-[85px] md:h-[85px] hidden md:block"/>
                             <Image src="/images/play.png" alt="Play" width={65} height={65}
                                    className="md:w-[85px] md:h-[85px] block md:hidden"/>
