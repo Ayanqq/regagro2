@@ -47,26 +47,33 @@ export default function ContactSection({sections, setCurrentSection, currentSect
 
                         <div className={'flex md:gap-[190px] gap-[90px]'}>
                             <nav className={'flex flex-col gap-[5px] md:gap-[15px]'}>
-                                <h3 className={'text-[#355332] text-[16px] md:text-[20px] font-semibold'}>Navigation</h3>
-                                <ul className={'flex flex-col gap-[5px] md:gap-[15px] text-[14px] md:text-[17px] text-[#4F584E] '}>
-                                    <li>About us</li>
-                                    <li>Catalog</li>
-                                    <li>IT Solutions</li>
-                                    <li>Contacts</li>
+                                <h3 className={'text-[#355332] text-[16px] md:text-[20px] font-semibold'}>
+                                    Navigation
+                                </h3>
+                                <ul className={'flex flex-col gap-[5px] md:gap-[15px] text-[14px] md:text-[17px] text-[#4F584E]'}>
+                                    <li className="hover:text-[#43764C] transition-colors">About us</li>
+                                    <li className="hover:text-[#43764C] transition-colors">Catalog</li>
+                                    <li className="hover:text-[#43764C] transition-colors">IT Solutions</li>
+                                    <li className="hover:text-[#43764C] transition-colors">Contacts</li>
                                 </ul>
-                                <h3 className={'text-[16px] md:text-[20px] font-semibold md:mt-[145px] md:mb[0] mt-[0] mb-[24px] text-[#355332]'}>Copyright</h3>
+                                <h3 className={'text-[16px] md:text-[20px] font-semibold md:mt-[145px] md:mb[0] mt-[0] mb-[24px] text-[#355332]'}>
+                                    Copyright
+                                </h3>
                             </nav>
 
-                            <nav className={'flex flex-col gap-[5px] md:gap-[15px] '}>
-                                <h3 className={'text-[#355332] text-[16px] md:text-[20px] font-semibold'}>Contacts</h3>
+                            <nav className={'flex flex-col gap-[5px] md:gap-[15px]'}>
+                                <h3 className={'text-[#355332] text-[16px] md:text-[20px] font-semibold'}>
+                                    Contacts
+                                </h3>
                                 <ul className={'flex flex-col gap-[5px] md:gap-[15px] text-[14px] md:text-[17px] text-[#4F584E]'}>
-                                    <li>Address</li>
-                                    <li>Phone</li>
-                                    <li>Email</li>
-                                    <li>Social Media</li>
+                                    <li className="hover:text-[#43764C] transition-colors">Address</li>
+                                    <li className="hover:text-[#43764C] transition-colors">Phone</li>
+                                    <li className="hover:text-[#43764C] transition-colors">Email</li>
+                                    <li className="hover:text-[#43764C] transition-colors">Social Media</li>
                                 </ul>
                             </nav>
                         </div>
+
                     </div>
                 </div>
             </Container>
