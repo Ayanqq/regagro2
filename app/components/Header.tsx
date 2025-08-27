@@ -86,7 +86,7 @@ export default function Header() {
 
                         {/* Button */}
                         <button
-                            className="bg-[#2F3F2D] text-white px-12.5 py-4.5 rounded-full leading-[120%] tracking-[-2%] font-normal transition-colors cursor-pointer">
+                            className="bg-[#2F3F2D] hover:bg-[#43764C] text-white px-12.5 py-4.5 rounded-full leading-[120%] tracking-[-2%] font-normal transition-colors cursor-pointer">
                             Request a call
                         </button>
                     </div>
