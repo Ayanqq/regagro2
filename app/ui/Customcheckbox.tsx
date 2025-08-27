@@ -43,7 +43,7 @@ export default function CustomCheckbox() {
 
             {/* текст */}
             <span className="text-[#4F584E]/50 font-normal text-[12px] md:text-[17px] leading-[120%] group">
-                I have read the <span className={'underline underline-offset-[4px] decoration-[1px] group-hover:text-[#4F584E]'}>Privacy Policy</span> and agree to the processing of my personal data.
+                I have read the <span className={'underline underline-offset-[4px] decoration-[1px] group-hover:text-[#43764C]/50'}>Privacy Policy</span> and agree to the processing of my personal data.
             </span>
         </label>
     );
