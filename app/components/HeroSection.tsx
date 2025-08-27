@@ -1,9 +1,12 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
 import Pagination from './Pagination';
 
 export default function HeroSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <section id="hero" className="relative pt-[60px] md:pt-[125px]">
       {/* Content */}
@@ -59,8 +62,18 @@ export default function HeroSection({sections, setCurrentSection, currentSection
             <div className="md:order-1 order-2 text-white md:text-[17px] text-[12px] font-medium leading-[120%] tracking-[-2%]">
               Learn more about us by <br /> watching a short video
             </div>
-            <button className="cursor-pointer md:order-2 order-1">
-              <Image src="/images/play.png" alt="Play" width={65} height={65} className="md:w-[105px] md:h-[105px]" />
+            <button 
+              className="cursor-pointer md:order-2 order-1"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <Image 
+                src={isHovered ? "/images/play-hover.png" : "/images/play.png"} 
+                alt="Play" 
+                width={105} 
+                height={105} 
+                className="md:w-[105px] md:h-[105px]" 
+              />
             </button>
           </div>
         </div>
