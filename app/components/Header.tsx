@@ -76,13 +76,14 @@ export default function Header() {
                                     className={`transition-colors font-medium text-[17px] leading-[120%] tracking-[-2%] ${
                                         activeHash === item.href
                                             ? "text-[#2F3F2D] font-bold underline decoration-dotted underline-offset-[6px]"
-                                            : "text-gray-600 hover:text-[#4F584E]"
+                                            : "text-gray-600 hover:text-[#43764C]"
                                     }`}
                                 >
                                     {item.label}
                                 </a>
                             ))}
                         </nav>
+
 
                         {/* Button */}
                         <button

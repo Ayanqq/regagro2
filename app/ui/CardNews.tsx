@@ -19,7 +19,9 @@ export const CardNews = () => {
                     fermentum, nisl in facilisis dictum, tellus purus gravida tellus.</p>
             </div>
             <div>
-                <Link href={'#'} className={'underline underline-offset-4 font-semibold text-[#4F584E] text-[14px] md:text-[17px]'}>Read more</Link>
+                <Link href={'#'} className={
+                    'underline underline-offset-4 font-semibold text-[#4F584E] text-[14px] md:text-[17px] hover:text-[#43764C]'
+                }>Read more</Link>
             </div>
                 <Image src={'/images/section/section-6-card.png'} alt={'cow'} height={133} width={133} className={'absolute bottom-[0] right-[0] block md:hidden'}/>
         </div>
