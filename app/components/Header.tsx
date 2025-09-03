@@ -55,9 +55,9 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed top-0 md:top-[15px] left-0 right-0 z-50">
+        <header className="fixed top-0 left-0 right-0 z-50">
             {/* Desktop header */}
-            <div className="hidden md:block max-w-[920px] lg:max-w-[1320px] mx-auto bg-white/95 backdrop-blur-sm rounded-full">
+            <div className="hidden md:block max-w-[920px] lg:max-w-[1320px] mx-auto bg-white backdrop-blur-sm">
                 <div className="px-7.5">
                     <div className="flex items-center justify-between h-[92px]">
                         {/* Logo */}
