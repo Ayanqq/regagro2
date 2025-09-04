@@ -29,7 +29,7 @@ export default function HeroSection({sections, setCurrentSection, currentSection
           {/* Dark overlay */}
         </div>
 
-        <div className="items-center relative z-20 md:pt-[218px] pt-[100px]">
+        <div className="items-center relative z-20 md:pt-[clamp(85px,calc(24vw-243px),218px)] pt-[100px]">
           {/* Left Content */}
           <div className="text-white items-center">
             {/* Welcome badge */}
