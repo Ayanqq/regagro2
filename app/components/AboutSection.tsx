@@ -28,7 +28,7 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
           />
         </div>
 
-                <div className="relative items-center h-full md:pt-[60px] pt-[30px] z-20">
+                <div className="relative items-center h-full md:pt-[clamp(0px,calc(24vw-243px),60px)] pt-[30px] z-20">
                     {/* Left Content */}
                     <div>
                         <div className={'max-w-[240px] md:max-w-[564px]'}>
