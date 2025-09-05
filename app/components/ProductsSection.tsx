@@ -47,11 +47,13 @@ export default function ProductsSection({sections, setCurrentSection, currentSec
                                className='md:hidden block w-full'/>
 
 
-                        <button
-                            className="hover:bg-gradient-to-r hover:from-[#FFE34F] hover:to-[#FFF0A4] bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] md:w-auto w-full px-[53px] md:py-[24px] py-[18px] rounded-full md:text-[17px] md:mt-[30px] mt-[20px] text-[12px] leading-[120%] md:leading-[20px] tracking-[-2%] font-bold transition-colors uppercase cursor-pointer">
-                            View the catalog
-                        </button>
+                        
                     </div>
+
+                    <button
+                            className="hover:bg-gradient-to-r hover:from-[#FFE34F] hover:to-[#FFF0A4] bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] md:w-auto w-full px-[53px] md:py-[24px] py-[18px] rounded-full md:text-[17px] md:mt-[30px] text-[12px] leading-[120%] md:leading-[20px] tracking-[-2%] font-bold transition-colors uppercase cursor-pointer">
+                            View the catalog
+                    </button>
 
                     {/* Right Side - Product Features */}
                     <div className="mt-[110px] md:flex flex-col gap-12 relative hidden">
