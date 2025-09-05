@@ -5,7 +5,7 @@ import Pagination from './Pagination';
 
 export default function ContactSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
     return (
-        <section id="contacts" className={'pt-[60px] md:pt-[125px] relative'}>
+        <section id="contacts" className={'pt-[60px] md:pt-[110px] relative'}>
             <Container className={'relative'}>
                 <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
                 <div className="absolute top-0 md:left-0 right-0 bottom-[0px] z-10">

@@ -9,7 +9,7 @@ export default function AboutSection({sections, setCurrentSection, currentSectio
     const [isHovered, setIsHovered] = useState(false);
   
     return (
-    <section id="about" className="relative bg-white pt-[60px] md:pt-[125px]">
+    <section id="about" className="relative bg-white pt-[60px] md:pt-[110px]">
       <div className="max-w-[920px] lg:max-w-[1320px] mx-auto md:px-7.5 px-[15px] md:h-[80vh] h-[663px] relative z-10">
         <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
         {/* Background Grass Texture */}

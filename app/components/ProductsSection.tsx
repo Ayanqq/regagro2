@@ -8,7 +8,7 @@ import { useState } from 'react';
 export default function ProductsSection({sections, setCurrentSection, currentSection}: {sections: string[], setCurrentSection: (section: string) => void, currentSection: string}) {
     const [isHovered, setIsHovered] = useState(false);
     return (
-        <section id="catalog" className="relative bg-white pt-[60px] md:pt-[125px]">
+        <section id="catalog" className="relative bg-white pt-[60px] md:pt-[110px]">
             <div className="max-w-[920px] lg:max-w-[1320px] mx-auto md:h-[80vh] h-[663px] relative z-10">
                 <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
                 {/* Background Grass Texture */}
