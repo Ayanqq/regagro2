@@ -9,7 +9,7 @@ export default function ProductsSection({sections, setCurrentSection, currentSec
     const [isHovered, setIsHovered] = useState(false);
     return (
         <section id="catalog" className="relative bg-white pt-[60px] md:pt-[110px]">
-            <div className="max-w-[920px] lg:max-w-[1320px] mx-auto md:h-[777px] h-[663px] relative z-10">
+            <div className="max-w-[920px] lg:max-w-[1320px] mx-auto md:h-[777px] h-[90vh] relative z-10">
                 <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
                 {/* Background Grass Texture */}
                 <div className="absolute inset-0">

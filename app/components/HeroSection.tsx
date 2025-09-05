@@ -10,7 +10,7 @@ export default function HeroSection({sections, setCurrentSection, currentSection
   return (
     <section id="hero" className="relative pt-[60px] md:pt-[110px]">
       {/* Content */}
-      <div className="max-w-[920px] lg:max-w-[1320px] md:h-[777px] h-[663px] mx-auto md:px-7.5 px-[15px] relative z-10">
+      <div className="max-w-[920px] lg:max-w-[1320px] md:h-[777px] h-[90vh] mx-auto md:px-7.5 px-[15px] relative z-10">
         <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
         {/* Background Image */}
         <div className="absolute inset-0">
