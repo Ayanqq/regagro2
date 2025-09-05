@@ -9,7 +9,7 @@ export default function ProductsSection({sections, setCurrentSection, currentSec
     const [isHovered, setIsHovered] = useState(false);
     return (
         <section id="catalog" className="relative bg-white pt-[60px] md:pt-[110px]">
-            <div className="max-w-[920px] lg:max-w-[1320px] mx-auto md:h-[777px] h-[90%] relative z-10">
+            <div className="max-w-[920px] lg:max-w-[1320px] mx-auto md:h-[80dvh] h-[663px] relative z-10">
                 <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
                 {/* Background Grass Texture */}
                 <div className="absolute inset-0">
@@ -30,7 +30,7 @@ export default function ProductsSection({sections, setCurrentSection, currentSec
                 <div
                     className="relative flex items-start md:items-center md:flex-row flex-col md:px-7.5 px-[15px] md:pt-[60px] pt-[30px] md:gap-[174px] gap-[20px] z-20">
                     {/* Left Content */}
-                    <div>
+                    <div className='w-full md:w-auto'>
                         <div className={'max-w-[230px] md:max-w-none'}>
                             <Headtitle minTitle={'catalog'} title={'Products available in your country'}/>
                         </div>
@@ -46,14 +46,14 @@ export default function ProductsSection({sections, setCurrentSection, currentSec
                         <Image src="/images/book-mobile.png" alt="Products" width={345} height={260}
                                className='md:hidden block w-full'/>
 
-
-                        
-                    </div>
-
-                    <button
+                        <button
                             className="hover:bg-gradient-to-r hover:from-[#FFE34F] hover:to-[#FFF0A4] bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] md:w-auto w-full px-[53px] md:py-[24px] py-[18px] rounded-full md:text-[17px] md:mt-[30px] text-[12px] leading-[120%] md:leading-[20px] tracking-[-2%] font-bold transition-colors uppercase cursor-pointer">
                             View the catalog
-                    </button>
+                        </button>
+
+                    </div>
+
+
 
                     {/* Right Side - Product Features */}
                     <div className="mt-[110px] md:flex flex-col gap-12 relative hidden">
