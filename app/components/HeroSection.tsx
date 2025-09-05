@@ -8,7 +8,7 @@ export default function HeroSection({sections, setCurrentSection, currentSection
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section id="hero" className="relative pt-[60px] md:pt-[125px]">
+    <section id="hero" className="relative pt-[60px] md:pt-[110px]">
       {/* Content */}
       <div className="max-w-[920px] lg:max-w-[1320px] md:h-[80vh] h-[663px] mx-auto md:px-7.5 px-[15px] relative z-10">
         <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection} />
