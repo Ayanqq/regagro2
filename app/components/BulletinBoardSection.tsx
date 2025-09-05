@@ -13,7 +13,7 @@ export default function BulletinBoardSection({sections, setCurrentSection, curre
 }) {
     return (
         <section id="bulletin-board" className="relative pt-[60px] md:pt-[110px]">
-            <Container className="relative min-h-[690px]">
+            <Container className="relative">
                 <Pagination sections={sections} onSectionChange={setCurrentSection} currentSection={currentSection}/>
                 <div className="absolute inset-0">
                     {/* Desktop Image */}
