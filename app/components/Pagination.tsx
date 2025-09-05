@@ -13,17 +13,6 @@ export default function Pagination({ sections, onSectionChange, currentSection }
     const [isScrolling, setIsScrolling] = useState(false);
     const [touchStartY, setTouchStartY] = useState<number | null>(null);
 
-    // ширина экрана
-    const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 1920);
-
-    useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    const isMobile = windowWidth < 768;
-
     // 📌 Обновляем активную секцию
     const updateActiveSection = useCallback(
         (index: number) => {
@@ -33,10 +22,27 @@ export default function Pagination({ sections, onSectionChange, currentSection }
         [sections, onSectionChange]
     );
 
-    // 📌 Поэкранный скролл (свайпы) — только на мобильных
+    // 📌 Поэкранный скролл (колесико мыши)
     useEffect(() => {
-        if (!isMobile) return;
+        const handleWheel = (e: WheelEvent) => {
+            e.preventDefault();
+            if (isScrolling) return;
 
+            if (e.deltaY > 0 && activeSection < sections.length - 1) {
+                updateActiveSection(activeSection + 1);
+                setIsScrolling(true);
+            } else if (e.deltaY < 0 && activeSection > 0) {
+                updateActiveSection(activeSection - 1);
+                setIsScrolling(true);
+            }
+        };
+
+        window.addEventListener('wheel', handleWheel, { passive: false });
+        return () => window.removeEventListener('wheel', handleWheel);
+    }, [activeSection, isScrolling, sections, updateActiveSection]);
+
+    // 📌 Поэкранный скролл (свайпы на тачах)
+    useEffect(() => {
         const handleTouchStart = (e: TouchEvent) => {
             setTouchStartY(e.touches[0].clientY);
         };
@@ -65,7 +71,7 @@ export default function Pagination({ sections, onSectionChange, currentSection }
             window.removeEventListener('touchstart', handleTouchStart);
             window.removeEventListener('touchend', handleTouchEnd);
         };
-    }, [activeSection, isScrolling, touchStartY, sections, updateActiveSection, isMobile]);
+    }, [activeSection, isScrolling, touchStartY, sections, updateActiveSection]);
 
     // 📌 Синхронизируем активную секцию с пропсом
     useEffect(() => {
@@ -80,7 +86,7 @@ export default function Pagination({ sections, onSectionChange, currentSection }
         const el = document.getElementById(sections[activeSection]);
         if (el) {
             el.scrollIntoView({ behavior: 'smooth' });
-            setTimeout(() => setIsScrolling(false), 800);
+            setTimeout(() => setIsScrolling(false), 800); // время блокировки = длительность анимации
         }
     }, [activeSection, sections]);
 
