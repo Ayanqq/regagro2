@@ -69,7 +69,7 @@ export default function CompanyNewsSection({sections, setCurrentSection, current
                         <CardNews/>
                     </div>
 
-                    <div className="mt-[20px] md:mt-[30px] pr-[15px] md:pr-0">
+                    <div className="mt-[10px] md:mt-[30px] pr-[15px] md:pr-0">
                         <button
                             className="hover:bg-gradient-to-r hover:from-[#FFE34F] hover:to-[#FFF0A4] bg-gradient-to-r from-[#FFDA18] to-[#FFE55E] text-[#355332] rounded-full py-[18px] w-full md:w-[auto] text-[12px] md:text-[17px] md:py-[24px] px-[60px] font-bold cursor-pointer">
                             EXPLORE THE LATEST NEWS
