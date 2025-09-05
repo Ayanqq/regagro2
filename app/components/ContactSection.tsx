@@ -12,12 +12,12 @@ export default function ContactSection({sections, setCurrentSection, currentSect
                     <img
                         src="/images/section/section-7.png"
                         alt="About background"
-                        className="w-full h-full object-cover hidden md:block"
+                        className="w-full h-full object-cover hidden md:block rounded-[20px]"
                     />
                     <img
                         src="/images/section/mobile/Frame%20158.png"
                         alt="About background"
-                        className="w-full h-full object-cover block md:hidden"
+                        className="w-full h-full object-cover block md:hidden rounded-[20px]"
                     />
                 </div>
                 <div className="z-20 relative pt-[30px] md:pt-[60px]">
