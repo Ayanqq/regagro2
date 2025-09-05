@@ -13,7 +13,7 @@ export default function Pagination({ sections, onSectionChange, currentSection }
     const [isScrolling, setIsScrolling] = useState(false);
     const [touchStartY, setTouchStartY] = useState<number | null>(null);
 
-    // детектор ширины экрана
+    // ширина экрана
     const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 1920);
 
     useEffect(() => {
@@ -23,8 +23,6 @@ export default function Pagination({ sections, onSectionChange, currentSection }
     }, []);
 
     const isMobile = windowWidth < 768;
-    const isLaptop = windowWidth >= 768 && windowWidth < 1280;
-    const isDesktop = windowWidth >= 1280;
 
     // 📌 Обновляем активную секцию
     const updateActiveSection = useCallback(
@@ -35,28 +33,7 @@ export default function Pagination({ sections, onSectionChange, currentSection }
         [sections, onSectionChange]
     );
 
-    // 📌 Поэкранный скролл (колесико мыши) — только на больших мониторах
-    useEffect(() => {
-        if (!isDesktop) return;
-
-        const handleWheel = (e: WheelEvent) => {
-            e.preventDefault();
-            if (isScrolling) return;
-
-            if (e.deltaY > 0 && activeSection < sections.length - 1) {
-                updateActiveSection(activeSection + 1);
-                setIsScrolling(true);
-            } else if (e.deltaY < 0 && activeSection > 0) {
-                updateActiveSection(activeSection - 1);
-                setIsScrolling(true);
-            }
-        };
-
-        window.addEventListener('wheel', handleWheel, { passive: false });
-        return () => window.removeEventListener('wheel', handleWheel);
-    }, [activeSection, isScrolling, sections, updateActiveSection, isDesktop]);
-
-    // 📌 Поэкранный скролл (свайпы на тачах) — только на мобильных
+    // 📌 Поэкранный скролл (свайпы) — только на мобильных
     useEffect(() => {
         if (!isMobile) return;
 
